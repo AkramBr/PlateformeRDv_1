@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from admindesigns.com/demos/admin/theme/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 May 2016 14:02:08 GMT -->
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <title>Admin HearDresser</title>
+    <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme"/>
+    <meta name="description" content="AdminDesigns - A Responsive HTML5 Admin UI Framework">
+    <meta name="author" content="AdminDesigns">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font CSS (Via CDN) -->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+    <!-- Required Plugin CSS -->
+    <link rel="stylesheet" type="text/css" href="vendor/plugins/tagmanager/tagmanager.css">
+    <link rel="stylesheet" type="text/css" href="vendor/plugins/daterange/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="vendor/plugins/datepicker/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="vendor/plugins/colorpicker/css/bootstrap-colorpicker.min.css">
+
+    <!-- Select2 Plugin CSS  -->
+    <link rel="stylesheet" type="text/css" href="vendor/plugins/select2/css/core.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body class="dashboard-page sb-l-o sb-r-c">
+
+<!-------------------------------------------------------------+ 
+  <body> Helper Classes: 
+---------------------------------------------------------------+ 
+  '.sb-l-o' - Sets Left Sidebar to "open"
+  '.sb-l-m' - Sets Left Sidebar to "minified"
+  '.sb-l-c' - Sets Left Sidebar to "closed"
+
+  '.sb-r-o' - Sets Right Sidebar to "open"
+  '.sb-r-c' - Sets Right Sidebar to "closed"
+---------------------------------------------------------------+
+ Example: <body class="example-page sb-l-o sb-r-c">
+ Results: Sidebar left Open, Sidebar right Closed
+--------------------------------------------------------------->
+
+<!-- For Demo Purposes - Theme Settings Pane -->
+<div id="skin-toolbox">
+    <div class="panel">
+        <div class="panel-heading">
+        <span class="panel-icon">
+          <i class="fa fa-gear text-primary"></i>
+        </span>
+            <span class="panel-title"> Theme Options</span>
+        </div>
+        <div class="panel-body pn">
+            <ul class="nav nav-list nav-list-sm pl15 pt10" role="tablist">
+                <li class="active">
+                    <a href="#toolbox-header" role="tab" data-toggle="tab">Navbar</a>
+                </li>
+                <li>
+                    <a href="#toolbox-sidebar" role="tab" data-toggle="tab">Sidebar</a>
+                </li>
+                <li>
+                    <a href="#toolbox-settings" role="tab" data-toggle="tab">Misc</a>
+                </li>
+            </ul>
+            <div class="tab-content p20 ptn pb15">
+                <div role="tabpanel" class="tab-pane active" id="toolbox-header">
+                    <form id="toolbox-header-skin">
+                        <h4 class="mv20">Header Skins</h4>
+                        <div class="skin-toolbox-swatches">
+                            <div class="checkbox-custom checkbox-disabled fill mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin8" checked value="">
+                                <label for="headerSkin8">Light</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-primary mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin1" value="bg-primary">
+                                <label for="headerSkin1">Primary</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-info mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin3" value="bg-info">
+                                <label for="headerSkin3">Info</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-warning mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin4" value="bg-warning">
+                                <label for="headerSkin4">Warning</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-danger mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin5" value="bg-danger">
+                                <label for="headerSkin5">Danger</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-alert mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin6" value="bg-alert">
+                                <label for="headerSkin6">Alert</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-system mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin7" value="bg-system">
+                                <label for="headerSkin7">System</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-success mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin2" value="bg-success">
+                                <label for="headerSkin2">Success</label>
+                            </div>
+                            <div class="checkbox-custom fill mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin9" value="bg-dark">
+                                <label for="headerSkin9">Dark</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="toolbox-sidebar">
+                    <form id="toolbox-sidebar-skin">
+                        <h4 class="mv20">Sidebar Skins</h4>
+                        <div class="skin-toolbox-swatches">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="radio" name="sidebarSkin" checked id="sidebarSkin3" value="">
+                                <label for="sidebarSkin3">Dark</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-disabled mb5">
+                                <input type="radio" name="sidebarSkin" id="sidebarSkin1" value="sidebar-light">
+                                <label for="sidebarSkin1">Light</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-light mb5">
+                                <input type="radio" name="sidebarSkin" id="sidebarSkin2" value="sidebar-light light">
+                                <label for="sidebarSkin2">Lighter</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="toolbox-settings">
+                    <form id="toolbox-settings-misc">
+                        <h4 class="mv20 mtn">Layout Options</h4>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" checked="" id="header-option">
+                                <label for="header-option">Fixed Header</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" checked="" id="sidebar-option">
+                                <label for="sidebar-option">Fixed Sidebar</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" id="breadcrumb-option">
+                                <label for="breadcrumb-option">Fixed Breadcrumbs</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" id="breadcrumb-hidden">
+                                <label for="breadcrumb-hidden">Hide Breadcrumbs</label>
+                            </div>
+                        </div>
+                        <h4 class="mv20">Layout Options</h4>
+                        <div class="form-group">
+                            <div class="radio-custom mb5">
+                                <input type="radio" id="fullwidth-option" checked name="layout-option">
+                                <label for="fullwidth-option">Fullwidth Layout</label>
+                            </div>
+                        </div>
+                        <div class="form-group mb20">
+                            <div class="radio-custom radio-disabled mb5">
+                                <input type="radio" id="boxed-option" name="layout-option" disabled>
+                                <label for="boxed-option">Boxed Layout
+                                    <b class="text-muted">(Coming Soon)</b>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="form-group mn br-t p15">
+                <a href="#" id="clearLocalStorage" class="btn btn-primary btn-block pb10 pt10">Clear LocalStorage</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End: Theme Settings Pane -->
+
+<!-- Start: Main -->
+<div id="main">
+
+    <!-----------------------------------------------------------------+ 
+       ".navbar" Helper Classes: 
+    -------------------------------------------------------------------+ 
+       * Positioning Classes: 
+        '.navbar-static-top' - Static top positioned navbar
+        '.navbar-static-top' - Fixed top positioned navbar
+
+       * Available Skin Classes:
+         .bg-dark    .bg-primary   .bg-success   
+         .bg-info    .bg-warning   .bg-danger
+         .bg-alert   .bg-system 
+    -------------------------------------------------------------------+
+      Example: <header class="navbar navbar-fixed-top bg-primary">
+      Results: Fixed top navbar with blue background 
+    ------------------------------------------------------------------->
+
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top">
+        <div class="navbar-branding">
+            <a class="navbar-brand" href="dashboard.html">
+                <b>Plateforme</b>RDV
+            </a>
+            <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+
+
+            <li class="hidden-xs">
+                <a class="request-fullscreen toggle-active" href="#">
+                    <span class="ad ad-screen-full fs18"></span>
+                </a>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-left navbar-search" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search..." value="Search...">
+            </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+
+
+            <li class="menu-divider hidden-xs">
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img
+                        src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> Laurent
+                    <span class="caret caret-tp hidden-xs"></span>
+                </a>
+                <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+                    <li class="list-group-item">
+                        <a href="#" class="animated animated-short fadeInUp">
+                            <span class="fa fa-user"></span> Profile </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="animated animated-short fadeInUp">
+                            <span class="fa fa-gear"></span> Account Settings </a>
+                    </li>
+                    <li class="dropdown-footer">
+                        <a href="#" class="">
+                            <span class="fa fa-power-off pr5"></span> Logout </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </header>
+    <!-- End: Header -->
+
+    <!-----------------------------------------------------------------+ 
+       "#sidebar_left" Helper Classes: 
+    -------------------------------------------------------------------+ 
+       * Positioning Classes: 
+        '.affix' - Sets Sidebar Left to the fixed position 
+
+       * Available Skin Classes:
+         .sidebar-dark (default no class needed)
+         .sidebar-light  
+         .sidebar-light.light   
+    -------------------------------------------------------------------+
+       Example: <aside id="sidebar_left" class="affix sidebar-light">
+       Results: Fixed Left Sidebar with light/white background
+    ------------------------------------------------------------------->
+
+    <!-- Start: Sidebar Left -->
+    <aside id="sidebar_left" class="nano nano-primary affix">
+
+        <!-- Start: Sidebar Left Content -->
+        <div class="sidebar-left-content nano-content">
+
+            <!-- Start: Sidebar Header -->
+            <header class="sidebar-header">
+                <!-- Sidebar Widget - Menu (Slidedown) -->
+
+
+                <!-- Sidebar Widget - Author (hidden)  -->
+
+
+                <!-- Sidebar Widget - Search (hidden) -->
+                <div class="sidebar-widget search-widget hidden">
+                    <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-search"></i>
+              </span>
+                        <input type="text" id="sidebar-search" class="form-control" placeholder="Search...">
+                    </div>
+                </div>
+
+            </header>
+            <!-- End: Sidebar Header -->
+
+            <!-- Start: Sidebar Left Menu -->
+<ul class="nav sidebar-menu">
+                <li class="active">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <span class="sidebar-title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="glyphicon glyphicon-book"></span>
+                        <span class="sidebar-title">Booking</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Booking list</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>add booking</a>
+                        </li>
+                         <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Booking tools</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-institution"></span>
+                        <span class="sidebar-title">Agency</span>
+                        <span class="caret"></span>
+
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Agency List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>add agency</a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-user"></span>
+                        <span class="sidebar-title">Customers</span>
+                        <span class="caret"></span>
+
+                    </a>
+                        <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Customer List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add customer</a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle" >
+                        <span class="fa fa-users"></span>
+                        <span class="sidebar-title">Employees</span>
+                         <span class="caret"></span>
+
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Employees List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add Employee</a>
+                        </li>
+
+                    </ul>
+                </li>
+                  <li>
+                    <a class="accordion-toggle" href="#">
+                        <span class="fa fa-tasks"></span>
+                        <span class="sidebar-title">Invoice</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Invoice List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Create Invoice</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a class="accordion-toggle" href="#">
+                        <span class="fa fa-tasks"></span>
+                        <span class="sidebar-title">Services</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Service List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add services</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-ticket"></span>
+                        <span class="sidebar-title">Vouchers</span>
+                        <span class="caret"></span>
+                    </a>
+                     <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Vouchers List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add Vouchers</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        <span class="sidebar-title">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-comment"></span>
+                        <span class="sidebar-title">SMS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="sidebar-title">Users</span>
+                        <span class="caret"></span>
+                    </a>
+                     <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> User List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add User</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-power-off"></span>
+                        <span class="sidebar-title">Logout</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- End: Sidebar Menu -->
+
+            <!-- Start: Sidebar Collapse Button -->
+            <div class="sidebar-toggle-mini">
+                <a href="#">
+                    <span class="fa fa-sign-out"></span>
+                </a>
+            </div>
+            <!-- End: Sidebar Collapse Button -->
+
+        </div>
+        <!-- End: Sidebar Left Content -->
+
+    </aside>
+    <!-- End: Sidebar Left -->
+
+    <!-- Start: Content-Wrapper -->
+    <section id="content_wrapper">
+
+        <!-- Start: Topbar-Dropdown -->
+
+        <!-- End: Topbar-Dropdown -->
+
+        <!-- Start: Topbar -->
+        <header id="topbar">
+            <div class="topbar-left">
+                <ol class="breadcrumb">
+                    <li class="crumb-active">
+                        <a href="dashboard.html">Profile Detail</a>
+                    </li>
+                    <li class="crumb-icon">
+                        <a href="dashboard.html">
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a>
+                    </li>
+
+                </ol>
+            </div>
+            <div class="topbar-right">
+
+            </div>
+        </header>
+        <!-- End: Topbar -->
+
+        <!-- Begin: Content -->
+        <div class="panel">
+            <div class="panel" id="spy3">
+
+                <div class="panel-body pn">
+
+                    <form class="form-horizontal" role="form">
+                        <label class="col-md-12 text-left"><h3>Details</h3></label>
+                        <p class="col-md-12 text-left"> - Basic informations about you and you business </p>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Business Name:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="Caratearn">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Business Website:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="Caratearn">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Your First Name:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="laurent">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Your Last Name:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="DEJONGHE">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Sub Category ( select one or more subcatpegore):</label>
+                            <div class="col-xs-8">
+                                <select class="form-control">
+                                    <option></option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Billing detials</label>
+                            <div class="col-xs-8">
+                                <label for="update" class="block mt15 option option-primary">
+                                    <input type="checkbox" name="update" id="update" value="update">
+                                    Update my Timely billing details with the settings</label>
+                            </div>
+                        </div>
+
+                        <br><br>
+
+                        <label class="col-md-12 text-left"><h3>Location details</h3></label>
+                        <p class="col-md-12 text-left"> Choose whether your location is fixed or mobile and enter in the location detail. </p>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Address:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">City :</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Zip Code:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">State:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">:</label>
+                            <div class="col-xs-8">
+                                <select class="form-control">
+                                    <option></option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right"></label>
+                            <div class="col-xs-8">
+                                <label for="d" class="block mt15 option option-primary">
+                                    <input type="checkbox" name="update" id="d" value="update">
+                                    To obtain the latitude and longitude of the address
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">latitude :</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">longitude:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Working Place</label>
+                            <div class="col-xs-2">
+                                <label for="onsite" class="block mt15 option option-primary">
+                                    <input type="checkbox" name="onsite" id="onsite" value="onsite">
+                                    On site</label>
+                            </div>
+                            <div class="col-xs-2">
+                                <label for="onhome" class="block mt15 option option-primary">
+                                    <input type="checkbox" name="onsite" id="onhome" value="onhome">
+                                     Home</label>
+                            </div>
+                            <div class="col-xs-2">
+                                <label for="both" class="block mt15 option option-primary">
+                                    <input type="checkbox" name="both" id="both" value="both">
+                                    Both</label>
+                            </div>
+                        </div>
+
+                        <label class="col-md-12 text-left"><h3>Contact Details</h3></label>
+
+                        <div class="row form-group">
+
+                            <div class="col-md-6">
+                                <label class="col-md-2 text-right">Telephone:</label>
+                                <div class="col-xs-8">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <!-- end section -->
+
+                            <div class="col-md-6">
+                                <label class="col-md-2 text-right">Telephone:</label>
+                                <div class="col-xs-8">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <!-- end section -->
+                        </div>
+                        <div class="row form-group">
+
+                            <div class="col-md-6">
+                                <label class="col-md-2 text-right">Mobile:</label>
+                                <div class="col-xs-8">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <!-- end section -->
+
+                            <div class="col-md-6">
+                                <label class="col-md-2 text-right">Fax:</label>
+                                <div class="col-xs-8">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <!-- end section -->
+                        </div>
+
+                        <label class="col-md-12 text-left"><h3>Regional Settings</h3></label>
+
+                        <div class="row form-group">
+
+                            <div class="col-md-6">
+                                <label class="col-md-2 text-right"> Country:</label>
+                                <div class="col-xs-8">
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <!-- end section -->
+
+
+                            <div class="col-md-6">
+                                <label class="col-md-2 text-right"> Currency </label>
+                                <div class="col-xs-8">
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <!-- end section -->
+
+
+                        </div>
+
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Time zone:</label>
+                            <div class="col-xs-8">
+                                <select class="form-control">
+                                    <option></option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="row form-group">
+
+                            <div class="col-md-6">
+                                <label class="col-md-2 text-right">Date format:</label>
+                                <div class="col-xs-8">
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- end section -->
+
+                            <div class="col-md-6">
+                                <label class="col-md-2 text-right">Time Format:</label>
+                                <div class="col-xs-8">
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- end section -->
+                        </div>
+
+
+                        <label class="col-md-12 text-left"><h3>Buessines Details</h3></label>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Siret:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder=" ">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Ape:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder=" ">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Vast number:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+
+                        <label class="col-md-12 text-left"><h3>Business description</h3></label>
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right"></label>
+
+                            <div class="col-xs-8">
+                                <textarea class="form-control textarea-grow" id="textArea1" rows="4"></textarea>
+                            </div>
+
+                        </div>
+
+                        <label class="col-md-12 text-left"><h3> Photo Gallery </h3></label>
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right"></label>
+                            <div class="col-xs-8">
+                                <input type="file" class="gui-file" name="file1" id="file1" >
+                                <input type="submit" class="form-control">
+                            </div>
+                        </div>
+
+
+                        <label class="col-md-12 text-left"><h3> Working Hours </h3></label>
+
+
+                        <table class="table table-condensed" style="margin:10px">
+                            <thead>
+                            <tr>
+                                <th>Day of week</th>
+                                <th>Is Day off</th>
+                                <th>Start TIme</th>
+                                <th>End TIme</th>
+                                <th>Lunch from</th>
+                                <th>lunch to</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Monday</td>
+                                <td>
+                                    <label class="checkbox-inline mr10">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">1
+                                    </label>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>
+                                    <label class="checkbox-inline mr10">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">1
+                                    </label>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>
+                                    <label class="checkbox-inline mr10">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">1
+                                    </label>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>
+                                    <label class="checkbox-inline mr10">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">1
+                                    </label>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>
+                                    <label class="checkbox-inline mr10">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">1
+                                    </label>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>
+                                    <label class="checkbox-inline mr10">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">1
+                                    </label>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>
+                                    <label class="checkbox-inline mr10">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">1
+                                    </label>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Monday</td>
+                                <td>
+                                    <label class="checkbox-inline mr10">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">1
+                                    </label>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </span>
+                                        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input
+                                                id="spinner4" class="form-control ui-spinner-input" name="spinner"
+                                                value="08:30 PM" aria-valuenow="1483298940000" autocomplete="off"
+                                                role="spinbutton"><a
+                                                class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-n">▲</span></a><a
+                                                class="ui-spinner-button ui-spinner-down ui-corner-br"
+                                                tabindex="-1"><span
+                                                class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                        <label class="col-md-12 text-left"><h3> Get social </h3></label>
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Twitter account:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="Twitter">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right">Facebook Page:</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" placeholder="Facebook">
+                            </div>
+                        </div>
+
+
+                        <label class="col-md-12 text-left"><h3> Intervention zone </h3></label>
+                        <div class="row form-group">
+                            <label class="col-md-2 text-right"></label>
+                            <div class="col-xs-8">
+                                <div class="form-group">
+                                    <form method="post" id="geocoding_form">
+                                        <div class="col-xs-9 prn">
+                                            <input type="text" class="form-control" id="address" name="address"
+                                                   placeholder="Enter an Address...">
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input type="submit" class="btn btn-default light btn-block" value="Search">
+                                        </div>
+                                    </form>
+                                </div>
+                                <br>
+                                <div id="map1" class="map" style="position: relative; overflow: hidden;">
+                                    <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
+                                        <div class="gm-style"
+                                             style="position: absolute; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; z-index: 0;">
+                                            <div style="position: absolute; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; z-index: 0; cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;">
+                                                <div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;">
+                                                        <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                                                            <div aria-hidden="true"
+                                                                 style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 66px; top: 104px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: -190px; top: 104px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 66px; top: -152px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 66px; top: 360px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 322px; top: 104px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: -190px; top: -152px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: -190px; top: 360px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 322px; top: -152px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 322px; top: 360px;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;">
+                                                        <div style="position: absolute; left: 0px; top: 0px; z-index: -1;">
+                                                            <div aria-hidden="true"
+                                                                 style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 66px; top: 104px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -190px; top: 104px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 66px; top: -152px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 66px; top: 360px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 322px; top: 104px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -190px; top: -152px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -190px; top: 360px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 322px; top: -152px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 322px; top: 360px;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; z-index: 0; left: 0px; top: 0px;">
+                                                        <div style="overflow: hidden; width: 496px; height: 400px;"><img
+                                                                src="http://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&amp;1i2399166&amp;2i4476824&amp;2e1&amp;3u15&amp;4m2&amp;1u496&amp;2u400&amp;5m5&amp;1e0&amp;5sen-US&amp;6sus&amp;10b1&amp;12b1&amp;token=98507"
+                                                                style="width: 496px; height: 400px;"></div>
+                                                    </div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                                                        <div aria-hidden="true"
+                                                             style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                                                            <div style="position: absolute; left: 66px; top: 104px; transition: opacity 200ms ease-out;">
+                                                                <img src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9372!3i17488!4i256!2m3!1e0!2sm!3i375061632!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=80639"
+                                                                     draggable="false" alt=""
+                                                                     style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                            </div>
+                                                            <div style="position: absolute; left: -190px; top: 104px; transition: opacity 200ms ease-out;">
+                                                                <img src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9371!3i17488!4i256!2m3!1e0!2sm!3i375061548!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=53798"
+                                                                     draggable="false" alt=""
+                                                                     style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                            </div>
+                                                            <div style="position: absolute; left: -190px; top: -152px; transition: opacity 200ms ease-out;">
+                                                                <img src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9371!3i17487!4i256!2m3!1e0!2sm!3i375061608!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=12308"
+                                                                     draggable="false" alt=""
+                                                                     style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                            </div>
+                                                            <div style="position: absolute; left: 66px; top: 360px; transition: opacity 200ms ease-out;">
+                                                                <img src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9372!3i17489!4i256!2m3!1e0!2sm!3i375061632!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=116660"
+                                                                     draggable="false" alt=""
+                                                                     style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                            </div>
+                                                            <div style="position: absolute; left: -190px; top: 360px; transition: opacity 200ms ease-out;">
+                                                                <img src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9371!3i17489!4i256!2m3!1e0!2sm!3i375061548!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=89819"
+                                                                     draggable="false" alt=""
+                                                                     style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                            </div>
+                                                            <div style="position: absolute; left: 322px; top: -152px; transition: opacity 200ms ease-out;">
+                                                                <img src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9373!3i17487!4i256!2m3!1e0!2sm!3i375061632!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=4897"
+                                                                     draggable="false" alt=""
+                                                                     style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                            </div>
+                                                            <div style="position: absolute; left: 322px; top: 360px; transition: opacity 200ms ease-out;">
+                                                                <img src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9373!3i17489!4i256!2m3!1e0!2sm!3i375061632!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=76939"
+                                                                     draggable="false" alt=""
+                                                                     style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                            </div>
+                                                            <div style="position: absolute; left: 322px; top: 104px; transition: opacity 200ms ease-out;">
+                                                                <img src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9373!3i17488!4i256!2m3!1e0!2sm!3i375061632!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=40918"
+                                                                     draggable="false" alt=""
+                                                                     style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                            </div>
+                                                            <div style="position: absolute; left: 66px; top: -152px; transition: opacity 200ms ease-out;">
+                                                                <img src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9372!3i17487!4i256!2m3!1e0!2sm!3i375061632!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=44618"
+                                                                     draggable="false" alt=""
+                                                                     style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="position: absolute; left: 0px; top: 0px; z-index: 2; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"></div>
+                                                <div style="position: absolute; left: 0px; top: 0px; z-index: 3; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"></div>
+                                                <div style="position: absolute; left: 0px; top: 0px; z-index: 4; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div>
+                                                </div>
+                                                <iframe frameborder="0"
+                                                        style="z-index: -1; border: 0px none; position: absolute; height: 100%; width: 100%; padding: 0px; margin: 0px; left: 0px; top: 0px;"></iframe>
+                                            </div>
+                                            <div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;">
+                                                <a target="_blank"
+                                                   href="https://maps.google.com/maps?ll=-12.043333,-77.028333&amp;z=15&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3"
+                                                   title="Click to see this area on Google Maps"
+                                                   style="position: static; overflow: visible; float: none; display: inline;">
+                                                    <div style="width: 66px; height: 26px; cursor: pointer;"><img
+                                                            src="http://maps.gstatic.com/mapfiles/api-3/images/google4.png"
+                                                            draggable="false"
+                                                            style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;">
+                                                    </div>
+                                                </a></div>
+                                            <div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 98px; top: 110px;">
+                                                <div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div>
+                                                <div style="font-size: 13px;">Map data ©2017 Google</div>
+                                                <div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;">
+                                                    <img src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png"
+                                                         draggable="false"
+                                                         style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                </div>
+                                            </div>
+                                            <div class="gmnoprint"
+                                                 style="z-index: 1000001; position: absolute; right: 252px; bottom: 0px; width: 121px;">
+                                                <div draggable="false" class="gm-style-cc"
+                                                     style="user-select: none; height: 14px; line-height: 14px;">
+                                                    <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                                        <div style="width: 1px;"></div>
+                                                        <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                                                    </div>
+                                                    <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+                                                        <a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map
+                                                            Data</a><span>Map data ©2017 Google</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="gmnoscreen"
+                                                 style="position: absolute; right: 0px; bottom: 0px;">
+                                                <div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">
+                                                    Map data ©2017 Google
+                                                </div>
+                                            </div>
+                                            <div class="gmnoprint gm-style-cc" draggable="false"
+                                                 style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 95px; bottom: 0px;">
+                                                <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                                    <div style="width: 1px;"></div>
+                                                    <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                                                </div>
+                                                <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+                                                    <a href="https://www.google.com/intl/en-US_US/help/terms_maps.html"
+                                                       target="_blank"
+                                                       style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms
+                                                        of Use</a></div>
+                                            </div>
+                                            <div style="cursor: pointer; width: 25px; height: 25px; overflow: hidden; display: none; margin: 10px 14px; position: absolute; top: 0px; right: 0px;">
+                                                <img src="http://maps.gstatic.com/mapfiles/api-3/images/sv9.png"
+                                                     draggable="false" class="gm-fullscreen-control"
+                                                     style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;">
+                                            </div>
+                                            <div draggable="false" class="gm-style-cc"
+                                                 style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;">
+                                                <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                                    <div style="width: 1px;"></div>
+                                                    <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                                                </div>
+                                                <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+                                                    <a target="_new"
+                                                       title="Report errors in the road map or imagery to Google"
+                                                       href="https://www.google.com/maps/@-12.043333,-77.028333,15z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3"
+                                                       style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report
+                                                        a map error</a></div>
+                                            </div>
+                                            <div class="gmnoprint gm-bundled-control" draggable="false"
+                                                 controlwidth="28" controlheight="55"
+                                                 style="margin: 10px; user-select: none; position: absolute; left: 0px; top: 0px;">
+                                                <div class="gmnoprint" controlwidth="28" controlheight="55"
+                                                     style="position: absolute; left: 0px; top: 0px;">
+                                                    <div draggable="false"
+                                                         style="user-select: none; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;">
+                                                        <div title="Zoom in"
+                                                             style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;">
+                                                            <div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;">
+                                                                <img src="http://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png"
+                                                                     draggable="false"
+                                                                     style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;">
+                                                            </div>
+                                                        </div>
+                                                        <div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div>
+                                                        <div title="Zoom out"
+                                                             style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;">
+                                                            <div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;">
+                                                                <img src="http://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png"
+                                                                     draggable="false"
+                                                                     style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom"
+                                                 draggable="false" controlwidth="28" controlheight="28"
+                                                 style="margin: 10px; user-select: none; position: absolute; bottom: 42px; right: 28px;">
+                                                <div class="gm-svpc" controlwidth="28" controlheight="28"
+                                                     style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px;">
+                                                    <div style="position: absolute; left: 1px; top: 1px;"></div>
+                                                    <div style="position: absolute; left: 1px; top: 1px;">
+                                                        <div aria-label="Street View Pegman Control"
+                                                             style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;">
+                                                            <img src="http://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png"
+                                                                 draggable="false"
+                                                                 style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                        </div>
+                                                        <div aria-label="Pegman is on top of the Map"
+                                                             style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;">
+                                                            <img src="http://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png"
+                                                                 draggable="false"
+                                                                 style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                        </div>
+                                                        <div aria-label="Street View Pegman Control"
+                                                             style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;">
+                                                            <img src="http://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png"
+                                                                 draggable="false"
+                                                                 style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="gmnoprint" controlwidth="28" controlheight="0"
+                                                     style="display: none; position: absolute;">
+                                                    <div title="Rotate map 90 degrees"
+                                                         style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;">
+                                                        <img src="http://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png"
+                                                             draggable="false"
+                                                             style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                    </div>
+                                                    <div class="gm-tilt"
+                                                         style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);">
+                                                        <img src="http://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png"
+                                                             draggable="false"
+                                                             style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gmnoprint"
+                                                 style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 48px; top: 0px;">
+                                                <div class="gm-style-mtc" style="float: left;">
+                                                    <div draggable="false" title="Show street map"
+                                                         style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 21px; font-weight: 500;">
+                                                        Map
+                                                    </div>
+                                                    <div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; left: 0px; top: 29px; text-align: left; display: none;">
+                                                        <div draggable="false" title="Show street map with terrain"
+                                                             style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;">
+                                                            <span role="checkbox"
+                                                                  style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div
+                                                                    style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img
+                                                                    src="http://maps.gstatic.com/mapfiles/mv/imgs8.png"
+                                                                    draggable="false"
+                                                                    style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label
+                                                                style="vertical-align: middle; cursor: pointer;">Terrain</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="gm-style-mtc" style="float: left;">
+                                                    <div draggable="false" title="Show satellite imagery"
+                                                         style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-left: 0px; min-width: 37px;">
+                                                        Satellite
+                                                    </div>
+                                                    <div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; right: 0px; top: 29px; text-align: left; display: none;">
+                                                        <div draggable="false" title="Show imagery with street names"
+                                                             style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;">
+                                                            <span role="checkbox"
+                                                                  style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div
+                                                                    style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img
+                                                                    src="http://maps.gstatic.com/mapfiles/mv/imgs8.png"
+                                                                    draggable="false"
+                                                                    style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label
+                                                                style="vertical-align: middle; cursor: pointer;">Labels</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div draggable="false" class="gm-style-cc"
+                                                 style="position: absolute; user-select: none; height: 14px; line-height: 14px; right: 166px; bottom: 0px;">
+                                                <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                                    <div style="width: 1px;"></div>
+                                                    <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                                                </div>
+                                                <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+                                                    <span>200 m&nbsp;</span>
+                                                    <div style="position: relative; display: inline-block; height: 8px; bottom: -1px; width: 43px;">
+                                                        <div style="width: 100%; height: 4px; position: absolute; left: 0px; top: 0px;"></div>
+                                                        <div style="width: 4px; height: 8px; left: 0px; top: 0px; background-color: rgb(255, 255, 255);"></div>
+                                                        <div style="width: 4px; height: 8px; position: absolute; background-color: rgb(255, 255, 255); left: 0px; bottom: 0px;"></div>
+                                                        <div style="position: absolute; background-color: rgb(102, 102, 102); height: 2px; left: 1px; bottom: 1px; right: 1px;"></div>
+                                                        <div style="position: absolute; width: 2px; height: 6px; left: 1px; top: 1px; background-color: rgb(102, 102, 102);"></div>
+                                                        <div style="width: 2px; height: 6px; position: absolute; background-color: rgb(102, 102, 102); bottom: 1px; right: 1px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+<button type="submit" class="btn btn-primary pull-right col-md-1" style="margin-right:90px;border-radius:3px;">Save</button>
+                    <button type="submit" class="btn btn-default pull-right col-md-1" style="margin-right:40px;border-radius:3px;">Cancel</button>
+                        
+                        <br><br><br> <br><br><br><br><br><br><br><br>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End: Content -->
+
+        <!-- Begin: Page Footer -->
+        <footer id="content-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="footer-legal">© 2017 PlateformeRDV</span>
+                </div>
+                <div class="col-md-6 text-right">
+                    <span class="footer-meta"></span>
+                    <a href="#content" class="footer-return-top">
+                        <span class="fa fa-arrow-up"></span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- End: Page Footer -->
+
+    </section>
+    <!-- End: Content-Wrapper -->
+
+    <!-- Start: Right Sidebar -->
+
+    <!-- End: Right Sidebar -->
+
+</div>
+<!-- End: Main -->
+
+<!-- BEGIN: PAGE SCRIPTS -->
+<style>
+    /* demo styles -summernote */
+    .btn-toolbar > .btn-group.note-fontname {
+        display: none;
+    }
+
+    /* demo styles - hides several ckeditor toolbar buttons */
+    #cke_52,
+    #cke_53 {
+        display: none !important;
+    }
+</style>
+
+<!-- BEGIN: PAGE SCRIPTS -->
+<!-- Load Google Map API -->
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
+<!-- jQuery -->
+<script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+<script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="vendor/plugins/map/gmaps.min.js"></script>
+<script src="vendor/plugins/gmap/jquery.ui.map.min.js"></script>
+<script src="vendor/plugins/gmap/ui/jquery.ui.map.extensions.min.js"></script>
+
+<!-- Time/Date Plugin Dependencies -->
+<script src="vendor/plugins/globalize/globalize.min.js"></script>
+<script src="vendor/plugins/moment/moment.min.js"></script>
+
+<script src="vendor/plugins/datepicker/js/bootstrap-datetimepicker.js"></script>
+
+<!-- Theme Javascript -->
+<script src="assets/js/utility/utility.js"></script>
+<script src="assets/js/demo/demo.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        "use strict";
+
+        // Init Theme Core
+        Core.init();
+
+        // Init Demo JS
+        Demo.init();
+
+
+        // Init GMaps Plugin - NOT the same plugin as above
+        var map = new GMaps({
+            div: '#map1',
+            lat: -12.043333,
+            lng: -77.028333,
+        });
+        // Add a working search bar to GMap
+        $('#geocoding_form').submit(function (e) {
+            e.preventDefault();
+            GMaps.geocode({
+                address: $('#address').val().trim(),
+                callback: function (results, status) {
+                    if (status == 'OK') {
+                        var latlng = results[0].geometry.location;
+                        map.setCenter(latlng.lat(), latlng.lng());
+                        map.addMarker({
+                            lat: latlng.lat(),
+                            lng: latlng.lng()
+                        });
+                    }
+                }
+            });
+        });
+
+        $("#spinner4").timespinner();
+
+
+        // Init Select2 - Basic Single
+        $(".select2-single").select2();
+
+        // Init Select2 - Basic Multiple
+        $(".select2-multiple").select2({
+            placeholder: "Select a state",
+            allowClear: true
+        });
+
+        // Init Select2 - Contextuals (via html classes)
+        $(".select2-primary").select2(); // select2 contextual - primary
+        $(".select2-success").select2(); // select2 contextual - success
+        $(".select2-info").select2();    // select2 contextual - info
+        $(".select2-warning").select2(); // select2 contextual - warning
+
+        // Init Bootstrap Maxlength Plugin
+        $('input[maxlength]').maxlength({
+            threshold: 15,
+            placement: "right"
+        });
+
+        // Dual List Plugin Init
+        var demo1 = $('.demo1').bootstrapDualListbox({
+            nonSelectedListLabel: 'Options',
+            selectedListLabel: 'Selected',
+            preserveSelectionOnMove: 'moved',
+            moveOnSelect: true,
+            nonSelectedFilter: 'ion ([7-9]|[1][0-2])'
+        });
+
+        $("#demoform").submit(function () {
+            alert("Options Selected: " + $('.demo1').val());
+            return false;
+        });
+
+        // Init Twitter Typeahead.js
+        var substringMatcher = function (strs) {
+            return function findMatches(q, cb) {
+                var matches, substrRegex;
+
+                // an array that will be populated with substring matches
+                matches = [];
+
+                // regex used to determine if a string contains the substring `q`
+                substrRegex = new RegExp(q, 'i');
+
+                // iterate through the pool of strings and for any string that
+                // contains the substring `q`, add it to the `matches` array
+                $.each(strs, function (i, str) {
+                    if (substrRegex.test(str)) {
+                        // the typeahead jQuery plugin expects suggestions to a
+                        // JavaScripobject, refer to typeahead docs for more info
+                        matches.push({
+                            value: str
+                        });
+                    }
+                });
+
+                cb(matches);
+            };
+        };
+
+        var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+            'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+            'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+            'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+            'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+            'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+            'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+            'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+            'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+        ];
+
+        // Init Typeahead Plugin with state aray
+        $('.typeahead').typeahead({
+            hint: true,
+            highlight: true,
+            minLength: 1
+        }, {
+            name: 'states',
+            displayKey: 'value',
+            source: substringMatcher(states)
+        });
+
+        // DateRange plugin options
+        var rangeOptions = {
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                'Last 7 Days': [moment().subtract('days', 6), moment()],
+                'Last 30 Days': [moment().subtract('days', 29), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+            },
+            startDate: moment().subtract('days', 29),
+            endDate: moment()
+        }
+
+        // Init DateRange plugin
+        $('#daterangepicker1').daterangepicker();
+
+        // Init DateRange plugin
+        $('#daterangepicker2').daterangepicker(
+            rangeOptions,
+            function (start, end) {
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            }
+        );
+
+        // Init DateRange plugin
+        $('#inline-daterange').daterangepicker(
+            rangeOptions,
+            function (start, end) {
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            }
+        );
+
+        // Init DateTimepicker - fields
+        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker2').datetimepicker();
+
+        // Init DateTimepicker - inline + range detection
+        $('#datetimepicker3').datetimepicker({
+            defaultDate: "9/4/2014",
+            inline: true,
+        });
+
+        // Init DateTimepicker - fields + Date disabled (only time picker)
+        $('#datetimepicker5').datetimepicker({
+            defaultDate: "9/25/2014",
+            pickDate: false,
+        });
+        // Init DateTimepicker - fields + Date disabled (only time picker)
+        $('#datetimepicker6').datetimepicker({
+            defaultDate: "9/25/2014",
+            pickDate: false,
+        });
+        // Init DateTimepicker - inline + Date disabled (only time picker)
+        $('#datetimepicker7').datetimepicker({
+            defaultDate: "9/25/2014",
+            pickDate: false,
+            inline: true
+        });
+
+        // Init Colorpicker plugin
+        $('#demo_apidemo').colorpicker({
+            color: bgPrimary
+        });
+        $('.demo-auto').colorpicker();
+
+        // Init jQuery Tags Manager
+        $(".tm-input").tagsManager({
+            tagsContainer: '.tags',
+            prefilled: ["Miley Cyrus", "Apple", "A Long Tag", "Na uh"],
+            tagClass: 'tm-tag-info',
+        });
+
+        // Init Boostrap Multiselects
+        $('#multiselect1').multiselect();
+        $('#multiselect2').multiselect({
+            includeSelectAllOption: true
+        });
+        $('#multiselect3').multiselect();
+        $('#multiselect4').multiselect({
+            enableFiltering: true,
+        });
+        $('#multiselect5').multiselect({
+            buttonClass: 'multiselect dropdown-toggle btn btn-default btn-primary'
+        });
+        $('#multiselect6').multiselect({
+            buttonClass: 'multiselect dropdown-toggle btn btn-default btn-info'
+        });
+        $('#multiselect7').multiselect({
+            buttonClass: 'multiselect dropdown-toggle btn btn-default btn-success'
+        });
+        $('#multiselect8').multiselect({
+            buttonClass: 'multiselect dropdown-toggle btn btn-default btn-warning'
+        });
+
+        // Init jQuery spinner init - default
+        $("#spinner1").spinner();
+
+        // Init jQuery spinner init - currency
+        $("#spinner2").spinner({
+            min: 5,
+            max: 2500,
+            step: 25,
+            start: 1000,
+            //numberFormat: "C"
+        });
+
+        // Init jQuery spinner init - decimal
+        $("#spinner3").spinner({
+            step: 0.01,
+            numberFormat: "n"
+        });
+
+        // jQuery Time Spinner settings
+        $.widget("ui.timespinner", $.ui.spinner, {
+            options: {
+                // seconds
+                step: 60 * 1000,
+                // hours
+                page: 60
+            },
+            _parse: function (value) {
+                if (typeof value === "string") {
+                    // already a timestamp
+                    if (Number(value) == value) {
+                        return Number(value);
+                    }
+                    return +Globalize.parseDate(value);
+                }
+                return value;
+            },
+
+            _format: function (value) {
+                return Globalize.format(new Date(value), "t");
+            }
+        });
+
+        // Init jQuery Time Spinner
+        $("#spinner4").timespinner();
+
+        // Init jQuery Masked inputs
+        $('.date').mask('99/99/9999');
+        $('.time').mask('99:99:99');
+        $('.date_time').mask('99/99/9999 99:99:99');
+        $('.zip').mask('99999-999');
+        $('.phone').mask('(999) 999-9999');
+        $('.phoneext').mask("(999) 999-9999 x99999");
+        $(".money").mask("999,999,999.999");
+        $(".product").mask("999.999.999.999");
+        $(".tin").mask("99-9999999");
+        $(".ssn").mask("999-99-9999");
+        $(".ip").mask("9ZZ.9ZZ.9ZZ.9ZZ");
+        $(".eyescript").mask("~9.99 ~9.99 999");
+        $(".custom").mask("9.99.999.9999");
+
+    });
+</script>
+<!-- END: PAGE SCRIPTS -->
+
+<!-- END: PAGE SCRIPTS -->
+
+</body>
+
+
+<!-- Mirrored from admindesigns.com/demos/admin/theme/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 May 2016 14:03:30 GMT -->
+</html>

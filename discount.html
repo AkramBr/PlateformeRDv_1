@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from admindesigns.com/demos/admin/theme/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 May 2016 14:02:08 GMT -->
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <title>Admin HearDresser</title>
+    <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme"/>
+    <meta name="description" content="AdminDesigns - A Responsive HTML5 Admin UI Framework">
+    <meta name="author" content="AdminDesigns">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font CSS (Via CDN) -->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+    <!-- Summernote CSS  -->
+    <link rel="stylesheet" type="text/css" href="vendor/plugins/summernote/summernote.css">
+
+    <!-- X-editable CSS -->
+    <link rel="stylesheet" type="text/css" href="vendor/plugins/xeditable/css/bootstrap-editable.css">
+    <link rel="stylesheet" type="text/css" href="vendor/plugins/xeditable/inputs/address/address.css">
+    <link rel="stylesheet" type="text/css"
+          href="vendor/plugins/xeditable/inputs/typeaheadjs/lib/typeahead.js-bootstrap.css">
+
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+
+    <![endif]-->
+
+</head>
+
+
+<body class="admin-modals-page sb-l-o sb-r-c onload-check">
+
+<div id="skin-toolbox">
+    <div class="panel">
+        <div class="panel-heading">
+        <span class="panel-icon">
+          <i class="fa fa-gear text-primary"></i>
+        </span>
+            <span class="panel-title"> Theme Options</span>
+        </div>
+        <div class="panel-body pn">
+            <ul class="nav nav-list nav-list-sm pl15 pt10" role="tablist">
+                <li class="active">
+                    <a href="#toolbox-header" role="tab" data-toggle="tab">Navbar</a>
+                </li>
+                <li>
+                    <a href="#toolbox-sidebar" role="tab" data-toggle="tab">Sidebar</a>
+                </li>
+                <li>
+                    <a href="#toolbox-settings" role="tab" data-toggle="tab">Misc</a>
+                </li>
+            </ul>
+            <div class="tab-content p20 ptn pb15">
+                <div role="tabpanel" class="tab-pane active" id="toolbox-header">
+                    <form id="toolbox-header-skin">
+                        <h4 class="mv20">Header Skins</h4>
+                        <div class="skin-toolbox-swatches">
+                            <div class="checkbox-custom checkbox-disabled fill mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin8" checked value="">
+                                <label for="headerSkin8">Light</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-primary mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin1" value="bg-primary">
+                                <label for="headerSkin1">Primary</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-info mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin3" value="bg-info">
+                                <label for="headerSkin3">Info</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-warning mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin4" value="bg-warning">
+                                <label for="headerSkin4">Warning</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-danger mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin5" value="bg-danger">
+                                <label for="headerSkin5">Danger</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-alert mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin6" value="bg-alert">
+                                <label for="headerSkin6">Alert</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-system mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin7" value="bg-system">
+                                <label for="headerSkin7">System</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-success mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin2" value="bg-success">
+                                <label for="headerSkin2">Success</label>
+                            </div>
+                            <div class="checkbox-custom fill mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin9" value="bg-dark">
+                                <label for="headerSkin9">Dark</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="toolbox-sidebar">
+                    <form id="toolbox-sidebar-skin">
+                        <h4 class="mv20">Sidebar Skins</h4>
+                        <div class="skin-toolbox-swatches">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="radio" name="sidebarSkin" checked id="sidebarSkin3" value="">
+                                <label for="sidebarSkin3">Dark</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-disabled mb5">
+                                <input type="radio" name="sidebarSkin" id="sidebarSkin1" value="sidebar-light">
+                                <label for="sidebarSkin1">Light</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-light mb5">
+                                <input type="radio" name="sidebarSkin" id="sidebarSkin2" value="sidebar-light light">
+                                <label for="sidebarSkin2">Lighter</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="toolbox-settings">
+                    <form id="toolbox-settings-misc">
+                        <h4 class="mv20 mtn">Layout Options</h4>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" checked="" id="header-option">
+                                <label for="header-option">Fixed Header</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" checked="" id="sidebar-option">
+                                <label for="sidebar-option">Fixed Sidebar</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" id="breadcrumb-option">
+                                <label for="breadcrumb-option">Fixed Breadcrumbs</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" id="breadcrumb-hidden">
+                                <label for="breadcrumb-hidden">Hide Breadcrumbs</label>
+                            </div>
+                        </div>
+                        <h4 class="mv20">Layout Options</h4>
+                        <div class="form-group">
+                            <div class="radio-custom mb5">
+                                <input type="radio" id="fullwidth-option" checked name="layout-option">
+                                <label for="fullwidth-option">Fullwidth Layout</label>
+                            </div>
+                        </div>
+                        <div class="form-group mb20">
+                            <div class="radio-custom radio-disabled mb5">
+                                <input type="radio" id="boxed-option" name="layout-option" disabled>
+                                <label for="boxed-option">Boxed Layout
+                                    <b class="text-muted">(Coming Soon)</b>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="form-group mn br-t p15">
+                <a href="#" id="clearLocalStorage" class="btn btn-primary btn-block pb10 pt10">Clear LocalStorage</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End: Theme Settings Pane -->
+
+<!-- Start: Main -->
+<div id="main">
+
+
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top">
+        <div class="navbar-branding">
+            <a class="navbar-brand" href="dashboard.html">
+                <b>Plateforme</b>RDV
+            </a>
+            <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+
+
+            <li class="hidden-xs">
+                <a class="request-fullscreen toggle-active" href="#">
+                    <span class="ad ad-screen-full fs18"></span>
+                </a>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-left navbar-search" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search..." value="Search...">
+            </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+
+
+            <li class="menu-divider hidden-xs">
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img
+                        src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> Laurent
+                    <span class="caret caret-tp hidden-xs"></span>
+                </a>
+                <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+                    <li class="list-group-item">
+                        <a href="#" class="animated animated-short fadeInUp">
+                            <span class="fa fa-user"></span> Profile </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="animated animated-short fadeInUp">
+                            <span class="fa fa-gear"></span> Account Settings </a>
+                    </li>
+                    <li class="dropdown-footer">
+                        <a href="#" class="">
+                            <span class="fa fa-power-off pr5"></span> Logout </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </header>
+    <!-- End: Header -->
+
+    <!-----------------------------------------------------------------+ 
+       "#sidebar_left" Helper Classes: 
+    -------------------------------------------------------------------+ 
+       * Positioning Classes: 
+        '.affix' - Sets Sidebar Left to the fixed position 
+
+       * Available Skin Classes:
+         .sidebar-dark (default no class needed)
+         .sidebar-light  
+         .sidebar-light.light   
+    -------------------------------------------------------------------+
+       Example: <aside id="sidebar_left" class="affix sidebar-light">
+       Results: Fixed Left Sidebar with light/white background
+    ------------------------------------------------------------------->
+
+    <!-- Start: Sidebar Left -->
+    <aside id="sidebar_left" class="nano nano-primary affix">
+
+        <!-- Start: Sidebar Left Content -->
+        <div class="sidebar-left-content nano-content">
+
+            <!-- Start: Sidebar Header -->
+            <header class="sidebar-header">
+                <!-- Sidebar Widget - Menu (Slidedown) -->
+
+
+                <!-- Sidebar Widget - Author (hidden)  -->
+
+
+                <!-- Sidebar Widget - Search (hidden) -->
+                <div class="sidebar-widget search-widget hidden">
+                    <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-search"></i>
+              </span>
+                        <input type="text" id="sidebar-search" class="form-control" placeholder="Search...">
+                    </div>
+                </div>
+
+            </header>
+            <!-- End: Sidebar Header -->
+
+            <!-- Start: Sidebar Left Menu -->
+<ul class="nav sidebar-menu">
+                <li class="active">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <span class="sidebar-title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="glyphicon glyphicon-book"></span>
+                        <span class="sidebar-title">Booking</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Booking list</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>add booking</a>
+                        </li>
+                         <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Booking tools</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-institution"></span>
+                        <span class="sidebar-title">Agency</span>
+                        <span class="caret"></span>
+
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Agency List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>add agency</a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-user"></span>
+                        <span class="sidebar-title">Customers</span>
+                        <span class="caret"></span>
+
+                    </a>
+                        <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Customer List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add customer</a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle" >
+                        <span class="fa fa-users"></span>
+                        <span class="sidebar-title">Employees</span>
+                         <span class="caret"></span>
+
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Employees List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add Employee</a>
+                        </li>
+
+                    </ul>
+                </li>
+                  <li>
+                    <a class="accordion-toggle" href="#">
+                        <span class="fa fa-tasks"></span>
+                        <span class="sidebar-title">Invoice</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Invoice List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Create Invoice</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a class="accordion-toggle" href="#">
+                        <span class="fa fa-tasks"></span>
+                        <span class="sidebar-title">Services</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Service List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add services</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-ticket"></span>
+                        <span class="sidebar-title">Vouchers</span>
+                        <span class="caret"></span>
+                    </a>
+                     <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Vouchers List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add Vouchers</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        <span class="sidebar-title">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-comment"></span>
+                        <span class="sidebar-title">SMS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="sidebar-title">Users</span>
+                        <span class="caret"></span>
+                    </a>
+                     <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> User List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add User</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-power-off"></span>
+                        <span class="sidebar-title">Logout</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- End: Sidebar Menu -->
+
+            <!-- Start: Sidebar Collapse Button -->
+            <div class="sidebar-toggle-mini">
+                <a href="#">
+                    <span class="fa fa-sign-out"></span>
+                </a>
+            </div>
+            <!-- End: Sidebar Collapse Button -->
+
+        </div>
+        <!-- End: Sidebar Left Content -->
+
+    </aside>
+    <!-- End: Sidebar Left -->
+
+    <!-- Start: Content-Wrapper -->
+    <section id="content_wrapper">
+
+        <!-- Start: Topbar-Dropdown -->
+
+        <!-- End: Topbar-Dropdown -->
+
+        <!-- Start: Topbar -->
+        <header id="topbar">
+            <div class="topbar-left">
+                <ol class="breadcrumb">
+                    <li class="crumb-active">
+                        <a href="dashboard.html">Discount</a>
+                    </li>
+                    <li class="crumb-icon">
+                        <a href="dashboard.html">
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+
+            <!---------------- ----->
+
+           
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  aria-hidden="true">
+                <div class="modal-dialog" style="display: block;padding-right: 17px;padding-top: 76px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Add Dicount</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" role="form" style="margin-left:10px">
+                                
+                  
+                               <div class="form-group">
+                                   <div class="col-md-3"> Name:</div>
+                                   <div class="col-md-7">
+                                       <input type="text" class="form-control" placeholder="Name ...">
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                   <div class="col-md-3"> Tax:</div>
+                                   <div class="col-md-7">
+                                       <select class="form-control">
+                                      <option>Not applicable</option>
+                                      <option>Option 2</option>
+                                      <option>Option 3</option>
+                                    </select>                          
+                                    </div>
+                                    </div>
+                                         <div class="form-group">
+                                   <div class="col-md-3"> Tax:</div>
+                                   <div class="col-md-7">
+                                        <div class="radio-custom mb5">
+                                      <input type="radio" id="1" name="radioExample">
+                                      <label for="1">Generic (specify discount when applying)</label>
+                                    </div>
+                                    
+                                    <div class="radio-custom mb5">
+                                      <input type="radio" id="2" name="radioExample">
+                                      <label for="2">Percentage</label>
+                                    </div>
+                                      <div class="radio-custom mb5">
+                                      <input type="radio" id="3" name="radioExample">
+                                      <label for="3">Fixed amount</label>
+                                    </div>
+                                                              
+                                    </div>
+                                    </div>
+                                <div class="form-group" id="per" hidden="hidden">
+                                   <div class="col-md-3"> Discount value:</div>
+                                   <div class="col-md-7">
+                                      <div class="input-group">
+                                      <span class="input-group-addon">
+                                        <i >%</i>
+                                      </span>
+                                      <input class="form-control" type="text" placeholder="">
+                                    </div>
+                                        </div>
+                                </div>
+                                <div class="form-group" id="val" hidden="hidden">
+                                   <div class="col-md-3"> Discount value:</div>
+                                   <div class="col-md-7">
+                                      <div class="input-group">
+                                      <span class="input-group-addon">
+                                        <i class="fa fa-eur"></i>
+                                      </span>
+                                      <input class="form-control" type="text" placeholder="">
+                                    </div>
+                                        </div>
+                                </div>
+                             
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div >
+
+
+
+
+            <!---- -->
+            <div class="topbar-right">
+            <button class="btn btn-success btn-sm" style="border-radius:3px" data-toggle="modal" data-target="#myModal"> Add discount</button>
+          
+        </div>
+        </header>
+        <!-- End: Topbar -->
+
+        <!-- Begin: Content -->
+        <div class="panel">
+<div class="panel-body pn">
+
+                                <form class="form-horizontal" role="form" style="margin-left:10px">
+
+                                    <div class=" row form-group" style="margin-left:25px"> 
+                                        <br><br>
+                                    <label class="col-md-8"> <h3><i class="fa fa-cut"></i> Remise Exceptionelle</h3><h5>20.00% </h5></label><br>
+                                        <div>
+                                      <button class="btn btn-primary " style="border-radius:5px"><i class="fa fa-edit"></i>Edit</button>
+                                      <button class="btn btn-danger " style="border-radius:5px"><i class="fa fa-trash"></i></button>
+                                      </div>
+                                        <label class="col-md-8"> <h3><i class="fa fa-cut"></i> Remise Exceptionelle</h3><h5>20.00€ discount </h5></label><br>
+                                        <div>
+                                      <button class="btn btn-primary " style="border-radius:5px"><i class="fa fa-edit"></i>Edit</button>
+                                      <button class="btn btn-danger " style="border-radius:5px"><i class="fa fa-trash"></i></button>
+                                      </div>
+                                    </div>
+                                    
+                                    
+                                
+                                         
+                                        
+                                 
+                                    
+
+<br><br>
+                                    <br><br>
+                                    <br><br><br><br><br><br><br><br><br>
+                                    <br><br><br>
+                                </form>
+                                
+                            </div><br>
+        </div>
+        <!-- End: Content -->
+
+        <!-- Begin: Page Footer -->
+        <footer id="content-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="footer-legal">© 2017 PlateformeRDV</span>
+                </div>
+                <div class="col-md-6 text-right">
+                    <span class="footer-meta"></span>
+                    <a href="#content" class="footer-return-top">
+                        <span class="fa fa-arrow-up"></span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- End: Page Footer -->
+
+    </section>
+    <!-- End: Content-Wrapper -->
+
+    <!-- Start: Right Sidebar -->
+
+    <!-- End: Right Sidebar -->
+
+</div>
+<!-- End: Main -->
+
+
+<!-- BEGIN: PAGE SCRIPTS -->
+
+<!-- jQuery -->
+<script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+<script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+<!-- Page Plugins -->
+
+<!-- Theme Javascript -->
+<script src="assets/js/utility/utility.js"></script>
+<script src="assets/js/demo/demo.js"></script>
+<script src="assets/js/main.js"></script>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#1").click(function(){
+        $("#per").hide();
+    });
+       $("#1").click(function(){
+        $("#val").hide();
+    });
+    
+   
+});
+</script> 
+    <script>
+$(document).ready(function(){
+    $("#2").click(function(){
+        $("#per").show();
+    });
+       $("#2").click(function(){
+        $("#val").hide();
+    });
+    
+   
+});
+</script> 
+    <script>
+$(document).ready(function(){
+    $("#3").click(function(){
+        $("#per").hide();
+    });
+       $("#3").click(function(){
+        $("#val").show();
+    });
+    
+   
+});
+</script> 
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        "use strict";
+
+        // Init Theme Core
+        Core.init();
+
+        // Init Demo JS
+        Demo.init();
+
+        var modalContent = $('#modal-content');
+
+        modalContent.on('click', '.holder-style', function (e) {
+            e.preventDefault();
+
+            modalContent.find('.holder-style').removeClass('holder-active');
+            $(this).addClass('holder-active');
+        });
+
+        function findActive() {
+            var activeModal = modalContent.find('.holder-active').attr('href');
+            return activeModal;
+        };
+
+        // Form Skin Switcher
+        $('#animation-switcher button').on('click', function () {
+            $('#animation-switcher').find('button').removeClass('active-animation');
+            $(this).addClass('active-animation item-checked');
+
+            // Inline Admin-Form example
+            $.magnificPopup.open({
+                removalDelay: 500, //delay removal by X to allow out-animation,
+                items: {
+                    src: findActive()
+                },
+                // overflowY: 'hidden', //
+                callbacks: {
+                    beforeOpen: function (e) {
+                        var Animation = $("#animation-switcher").find('.active-animation').attr('data-effect');
+                        this.st.mainClass = Animation;
+                    }
+                },
+                midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+            });
+
+        });
+
+    });
+</script>
+
+
+</body>
+
+
+<!-- Mirrored from admindesigns.com/demos/admin/theme/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 May 2016 14:03:30 GMT -->
+</html>

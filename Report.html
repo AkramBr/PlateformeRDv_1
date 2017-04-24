@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from admindesigns.com/demos/admin/theme/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 May 2016 14:02:08 GMT -->
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <title>Admin HearDresser</title>
+  <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+  <meta name="description" content="AdminDesigns - A Responsive HTML5 Admin UI Framework">
+  <meta name="author" content="AdminDesigns">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font CSS (Via CDN) -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+  <!-- Summernote CSS  -->
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/summernote/summernote.css">
+
+  <!-- X-editable CSS -->
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/xeditable/css/bootstrap-editable.css">
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/xeditable/inputs/address/address.css">
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/xeditable/inputs/typeaheadjs/lib/typeahead.js-bootstrap.css">
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+
+<body class="dashboard-page sb-l-o sb-r-c">
+
+<!-------------------------------------------------------------+ 
+  <body> Helper Classes: 
+---------------------------------------------------------------+ 
+  '.sb-l-o' - Sets Left Sidebar to "open"
+  '.sb-l-m' - Sets Left Sidebar to "minified"
+  '.sb-l-c' - Sets Left Sidebar to "closed"
+
+  '.sb-r-o' - Sets Right Sidebar to "open"
+  '.sb-r-c' - Sets Right Sidebar to "closed"
+---------------------------------------------------------------+
+ Example: <body class="example-page sb-l-o sb-r-c">
+ Results: Sidebar left Open, Sidebar right Closed
+--------------------------------------------------------------->
+
+  <!-- For Demo Purposes - Theme Settings Pane -->
+  <div id="skin-toolbox">
+    <div class="panel">
+      <div class="panel-heading">
+        <span class="panel-icon">
+          <i class="fa fa-gear text-primary"></i>
+        </span>
+        <span class="panel-title"> Theme Options</span>
+      </div>
+      <div class="panel-body pn">
+        <ul class="nav nav-list nav-list-sm pl15 pt10" role="tablist">
+          <li class="active">
+            <a href="#toolbox-header" role="tab" data-toggle="tab">Navbar</a>
+          </li>
+          <li>
+            <a href="#toolbox-sidebar" role="tab" data-toggle="tab">Sidebar</a>
+          </li>
+          <li>
+            <a href="#toolbox-settings" role="tab" data-toggle="tab">Misc</a>
+          </li>
+        </ul>
+        <div class="tab-content p20 ptn pb15">
+          <div role="tabpanel" class="tab-pane active" id="toolbox-header">
+            <form id="toolbox-header-skin">
+              <h4 class="mv20">Header Skins</h4>
+              <div class="skin-toolbox-swatches">
+                <div class="checkbox-custom checkbox-disabled fill mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin8" checked value="">
+                  <label for="headerSkin8">Light</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-primary mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin1" value="bg-primary">
+                  <label for="headerSkin1">Primary</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-info mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin3" value="bg-info">
+                  <label for="headerSkin3">Info</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-warning mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin4" value="bg-warning">
+                  <label for="headerSkin4">Warning</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-danger mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin5" value="bg-danger">
+                  <label for="headerSkin5">Danger</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-alert mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin6" value="bg-alert">
+                  <label for="headerSkin6">Alert</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-system mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin7" value="bg-system">
+                  <label for="headerSkin7">System</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-success mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin2" value="bg-success">
+                  <label for="headerSkin2">Success</label>
+                </div>
+                <div class="checkbox-custom fill mb5">
+                  <input type="radio" name="headerSkin" id="headerSkin9" value="bg-dark">
+                  <label for="headerSkin9">Dark</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="toolbox-sidebar">
+            <form id="toolbox-sidebar-skin">
+              <h4 class="mv20">Sidebar Skins</h4>
+              <div class="skin-toolbox-swatches">
+                <div class="checkbox-custom fill mb5">
+                  <input type="radio" name="sidebarSkin" checked id="sidebarSkin3" value="">
+                  <label for="sidebarSkin3">Dark</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-disabled mb5">
+                  <input type="radio" name="sidebarSkin" id="sidebarSkin1" value="sidebar-light">
+                  <label for="sidebarSkin1">Light</label>
+                </div>
+                <div class="checkbox-custom fill checkbox-light mb5">
+                  <input type="radio" name="sidebarSkin" id="sidebarSkin2" value="sidebar-light light">
+                  <label for="sidebarSkin2">Lighter</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="toolbox-settings">
+            <form id="toolbox-settings-misc">
+              <h4 class="mv20 mtn">Layout Options</h4>
+              <div class="form-group">
+                <div class="checkbox-custom fill mb5">
+                  <input type="checkbox" checked="" id="header-option">
+                  <label for="header-option">Fixed Header</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="checkbox-custom fill mb5">
+                  <input type="checkbox" checked="" id="sidebar-option">
+                  <label for="sidebar-option">Fixed Sidebar</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="checkbox-custom fill mb5">
+                  <input type="checkbox" id="breadcrumb-option">
+                  <label for="breadcrumb-option">Fixed Breadcrumbs</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="checkbox-custom fill mb5">
+                  <input type="checkbox" id="breadcrumb-hidden">
+                  <label for="breadcrumb-hidden">Hide Breadcrumbs</label>
+                </div>
+              </div>
+              <h4 class="mv20">Layout Options</h4>
+              <div class="form-group">
+                <div class="radio-custom mb5">
+                  <input type="radio" id="fullwidth-option" checked name="layout-option">
+                  <label for="fullwidth-option">Fullwidth Layout</label>
+                </div>
+              </div>
+              <div class="form-group mb20">
+                <div class="radio-custom radio-disabled mb5">
+                  <input type="radio" id="boxed-option" name="layout-option" disabled>
+                  <label for="boxed-option">Boxed Layout
+                    <b class="text-muted">(Coming Soon)</b>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="form-group mn br-t p15">
+          <a href="#" id="clearLocalStorage" class="btn btn-primary btn-block pb10 pt10">Clear LocalStorage</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End: Theme Settings Pane -->
+
+  <!-- Start: Main -->
+  <div id="main">
+
+    <!-----------------------------------------------------------------+ 
+       ".navbar" Helper Classes: 
+    -------------------------------------------------------------------+ 
+       * Positioning Classes: 
+        '.navbar-static-top' - Static top positioned navbar
+        '.navbar-static-top' - Fixed top positioned navbar
+
+       * Available Skin Classes:
+         .bg-dark    .bg-primary   .bg-success   
+         .bg-info    .bg-warning   .bg-danger
+         .bg-alert   .bg-system 
+    -------------------------------------------------------------------+
+      Example: <header class="navbar navbar-fixed-top bg-primary">
+      Results: Fixed top navbar with blue background 
+    ------------------------------------------------------------------->
+
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top">
+      <div class="navbar-branding">
+        <a class="navbar-brand" href="dashboard.html">
+          <b>Plateforme</b>RDV
+        </a>
+        <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+      </div>
+      <ul class="nav navbar-nav navbar-left">
+       
+      
+        <li class="hidden-xs">
+          <a class="request-fullscreen toggle-active" href="#">
+            <span class="ad ad-screen-full fs18"></span>
+          </a>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left navbar-search" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search..." value="Search...">
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        <li class="menu-divider hidden-xs">
+          <i class="fa fa-circle"></i>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> Laurent
+            <span class="caret caret-tp hidden-xs"></span>
+          </a>
+          <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+              <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-user"></span> Profile </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="animated animated-short fadeInUp">
+                <span class="fa fa-gear"></span> Account Settings </a>
+            </li>
+            <li class="dropdown-footer">
+              <a href="#" class="">
+              <span class="fa fa-power-off pr5"></span> Logout </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </header>
+    <!-- End: Header -->
+
+    <!-----------------------------------------------------------------+ 
+       "#sidebar_left" Helper Classes: 
+    -------------------------------------------------------------------+ 
+       * Positioning Classes: 
+        '.affix' - Sets Sidebar Left to the fixed position 
+
+       * Available Skin Classes:
+         .sidebar-dark (default no class needed)
+         .sidebar-light  
+         .sidebar-light.light   
+    -------------------------------------------------------------------+
+       Example: <aside id="sidebar_left" class="affix sidebar-light">
+       Results: Fixed Left Sidebar with light/white background
+    ------------------------------------------------------------------->
+
+    <!-- Start: Sidebar Left -->
+    <aside id="sidebar_left" class="nano nano-primary affix">
+
+      <!-- Start: Sidebar Left Content -->
+      <div class="sidebar-left-content nano-content">
+
+        <!-- Start: Sidebar Header -->
+        <header class="sidebar-header">
+          <!-- Sidebar Widget - Menu (Slidedown) -->
+          
+
+          <!-- Sidebar Widget - Author (hidden)  -->
+          
+
+          <!-- Sidebar Widget - Search (hidden) -->
+          <div class="sidebar-widget search-widget hidden">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-search"></i>
+              </span>
+              <input type="text" id="sidebar-search" class="form-control" placeholder="Search...">
+            </div>
+          </div>
+
+        </header>
+        <!-- End: Sidebar Header -->
+
+        <!-- Start: Sidebar Left Menu -->
+        <ul class="nav sidebar-menu">
+                <li class="active">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <span class="sidebar-title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="glyphicon glyphicon-book"></span>
+                        <span class="sidebar-title">Booking</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Booking list</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>add booking</a>
+                        </li>
+                         <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Booking tools</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-institution"></span>
+                        <span class="sidebar-title">Agency</span>
+                        <span class="caret"></span>
+
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Agency List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>add agency</a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-user"></span>
+                        <span class="sidebar-title">Customers</span>
+                        <span class="caret"></span>
+
+                    </a>
+                        <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Customer List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add customer</a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle" >
+                        <span class="fa fa-users"></span>
+                        <span class="sidebar-title">Employees</span>
+                         <span class="caret"></span>
+
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Employees List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add Employee</a>
+                        </li>
+
+                    </ul>
+                </li>
+                  <li>
+                    <a class="accordion-toggle" href="#">
+                        <span class="fa fa-tasks"></span>
+                        <span class="sidebar-title">Invoice</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Invoice List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Create Invoice</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a class="accordion-toggle" href="#">
+                        <span class="fa fa-tasks"></span>
+                        <span class="sidebar-title">Services</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Service List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add services</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-ticket"></span>
+                        <span class="sidebar-title">Vouchers</span>
+                        <span class="caret"></span>
+                    </a>
+                     <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Vouchers List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add Vouchers</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        <span class="sidebar-title">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-comment"></span>
+                        <span class="sidebar-title">SMS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="sidebar-title">Users</span>
+                        <span class="caret"></span>
+                    </a>
+                     <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> User List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add User</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-power-off"></span>
+                        <span class="sidebar-title">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        <!-- End: Sidebar Menu -->
+
+	      <!-- Start: Sidebar Collapse Button -->
+	      <div class="sidebar-toggle-mini">
+	        <a href="#">
+	          <span class="fa fa-sign-out"></span>
+	        </a>
+	      </div>
+	      <!-- End: Sidebar Collapse Button -->
+
+      </div>
+      <!-- End: Sidebar Left Content -->
+
+    </aside>
+    <!-- End: Sidebar Left -->
+
+    <!-- Start: Content-Wrapper -->
+    <section id="content_wrapper">
+
+      <!-- Start: Topbar-Dropdown -->
+      
+      <!-- End: Topbar-Dropdown -->
+
+      <!-- Start: Topbar -->
+      <header id="topbar">
+        <div class="topbar-left">
+          <ol class="breadcrumb">
+            <li class="crumb-active">
+              <a href="dashboard.html">Reports </a>
+            </li>
+            <li class="crumb-icon">
+              <a href="dashboard.html">
+                <span class="glyphicon glyphicon-home"></span>
+              </a>
+            </li>
+          
+          </ol>
+        </div>
+       
+      </header>
+      <!-- End: Topbar -->
+
+      <!-- Begin: Content -->
+    <div class="panel">
+
+             <div class="panel">
+              
+              <div class="panel-body">
+                  <h2>Report</h2>
+                  <h5>Evalute and refine your business with these instant reports. All data can be exported to Excel, Word or PDF for working with other<br>programs or printing.</h5><br>
+                  <div class="table-layout br-t">
+                  <div class="col-xs-6"><h4>Business performance</h4>
+                    <h4 class="text-muted pl5 mt20 mb20"><a>Executive summary</a></h4>
+                   
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>View a summary of appoints and sales grouped by staff and loation.Shows key perfoarmance metrics lie rebooking rate.
+                      </li>
+                    
+                    
+                    </ul>
+                       <h4 class="text-muted pl5 mt20 mb20"><a>Future value</a></h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>See the local value of future appointment grouped by employee, service and location. You can select the time period to view.
+                      </li>
+                    
+                    
+                    </ul>
+                  </div>
+                  <div class="col-xs-6 ">
+                    <h4 class="text-muted pl5 mt20 mb20"><a> Monthly summary </a>  </h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>View a summary of appointments and sales grouped by mont.
+                      </li>
+                    
+                    
+                    </ul>
+                       <h4 class="text-muted pl5 mt20 mb20"> <a>Customer Spand </a> </h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>See the total value of your customers's appointments. Includes total spend, number of appointments and contact details.
+                      </li>
+                    
+                    
+                    </ul>
+                  </div>
+                <i class="fa fa-line-chart pull-right" style="font-size:36px"></i></div>
+                  <div class="table-layout br-t">
+                  <div class="col-xs-6"><h4>Financial reports
+</h4>
+                    <h4 class="text-muted pl5 mt20 mb20"><a>Sales report </a></h4>
+                   
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>A summary of the total sales value for you appointments, prpducts and dicount on a selected time period, includes tax totals.
+                      </li>
+                    
+                    
+                    </ul>
+                       <h4 class="text-muted pl5 mt20 mb20"><a>Daily transaction summary</a></h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>Shows you a total and a full idt of payments transactions and what payement type was used (cash, credit etc)
+                      </li>
+                    
+                    
+                    </ul>
+                       <h4 class="text-muted pl5 mt20 mb20"><a>Gift voucher activily</a></h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>See which gift vouchers your customers have been buying and redeeming/
+                      </li>
+                    
+                    
+                    </ul>
+                  </div>
+                  <div class="col-xs-6 ">
+                    <h4 class="text-muted pl5 mt20 mb20"><a> Service Sales report </a>  </h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>A summary of the total sales value for your service sales grouped by category includes tax totals and category spits.
+                      </li>
+                    
+                    
+                    </ul>
+                       <h4 class="text-muted pl5 mt20 mb20"> <a>Invoice detail </a> </h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>View a detailed of your invoices
+                      </li>
+                    
+                    
+                    </ul>
+                  </div>
+                <i class="fa fa-bar-chart pull-right" style="font-size:36px"></i></div>
+                  <div class="table-layout br-t">
+                  <div class="col-xs-6"><h4>Appointments</h4>
+                    <h4 class="text-muted pl5 mt20 mb20"><a> Say sheet</a></h4>
+                   
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>Run off a list of appointments for today, or longer time period as required. Can be filtered by staff or location.
+                      </li>
+                    
+                    
+                    </ul>
+                       <h4 class="text-muted pl5 mt20 mb20"><a>Cancelled appointments</a></h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>Run this reports for a selected time period to view a lidt of all the cancedled includes date cancelled and reason.
+                      </li>
+                    
+                    
+                    </ul>
+                      <h4 class="text-muted pl5 mt20 mb20"><a>No-show appointments</a></h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>View a list of appointment where the customer did not show. inludes a court of number of times the customer has failed to show.
+                      </li>
+                    
+                    
+                    </ul>
+                      
+                  </div>
+                  <div class="col-xs-6 ">
+                    <h4 class="text-muted pl5 mt20 mb20"><a> Appontment schedule </a>  </h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>A full list of all of your appointments for a selected time period. Great for a backup or to import into other systems.
+                      </li>
+                    
+                    
+                    </ul>
+                       <h4 class="text-muted pl5 mt20 mb20"> <a>Incomplete appointments </a> </h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>View appointments that have not been marked as completeed. Great for finding missing appointments to tick at the end of the day
+                      </li>
+                    
+                    
+                    </ul>
+                      <h4 class="text-muted pl5 mt20 mb20"> <a>Pencilled-in appointments </a> </h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>Run this report to view appoints still in pencilled-in status
+                    
+                    
+                    </ul>
+                  </div>
+                <i class="fa fa-calendar pull-right" style="font-size:36px"></i></div>
+                  <div class="table-layout br-t">
+                  <div class="col-xs-6"><h4>Customers</h4>
+                    <h4 class="text-muted pl5 mt20 mb20"><a>Executive summary</a></h4>
+                   
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>Find which of your customers haven't had a booking since a selected date. A gret way to follow up o who need an appointments.
+                      </li>
+                    
+                    
+                    </ul>
+                       <h4 class="text-muted pl5 mt20 mb20"><a>Duplicate customer list</a></h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>Find customer recors that may be a double up. You can then use the merge feature under the customers tab to tidy your database.
+                      </li>
+                    
+                    
+                    </ul>
+                      <h4 class="text-muted pl5 mt20 mb20"><a>Deleted customer list</a></h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>Find customer recors that you have deleted. You can restore any deleted customers.
+                      </li>
+                    
+                    
+                    </ul>
+                  </div>
+                  <div class="col-xs-6 ">
+                    <h4 class="text-muted pl5 mt20 mb20"><a> Customer notes </a>  </h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>The reports will show you all the notes that you have entered against a customer and their appointments.
+                      </li>
+                    
+                    
+                    </ul>
+                       <h4 class="text-muted pl5 mt20 mb20"> <a>Customer Spand </a> </h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>A list of customers with their issued gift vouchers and details of the redemption made.
+                      </li>
+                    
+                    
+                    </ul>
+                  </div>
+                <i class="fa fa-group pull-right" style="font-size:36px"></i></div>
+                  <div class="table-layout br-t">
+                  <div class="col-xs-6"><h4>Employees</h4>
+                    <h4 class="text-muted pl5 mt20 mb20"><a>Employees timesheet</a></h4>
+                   
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>View the hours worked by your employees and the percentage of time spend on appointments.
+                      </li>
+                    
+                    
+                    </ul>
+                       
+                  </div>
+                  <div class="col-xs-6 ">
+                    <h4 class="text-muted pl5 mt20 mb20"><a> Employees appointments summary </a>  </h4>
+                    <ul class="fs15 list-divide-items mb30">
+                      <li>
+                        <a class="link-unstyled" href="#" title="">
+                          </a>Show you a sumay of appointment and invoice value by service and employees members.
+                      </li>
+                    
+                    
+                    </ul>
+                      
+                  </div>
+                <i class="fa fa-user pull-right" style="font-size:36px"></i></div>
+           <br>
+                 <br>
+                 <br>
+                 <br>
+              </div>
+               
+            </div> 
+</div>
+      <!-- End: Content -->
+
+      <!-- Begin: Page Footer -->
+      <footer id="content-footer">
+        <div class="row">
+          <div class="col-md-6">
+            <span class="footer-legal">© 2017 PlateformeRDV</span>
+          </div>
+          <div class="col-md-6 text-right">
+            <span class="footer-meta"></span>
+            <a href="#content" class="footer-return-top">
+              <span class="fa fa-arrow-up"></span>
+            </a>
+          </div>
+        </div>
+      </footer>
+      <!-- End: Page Footer -->
+
+    </section>
+    <!-- End: Content-Wrapper -->
+
+    <!-- Start: Right Sidebar -->
+    
+    <!-- End: Right Sidebar -->
+
+  </div>
+  <!-- End: Main -->
+
+  <!-- BEGIN: PAGE SCRIPTS -->
+<style>
+  /* demo styles -summernote */
+  .btn-toolbar > .btn-group.note-fontname {
+    display: none;
+  }
+  /* demo styles - hides several ckeditor toolbar buttons */
+  #cke_52,
+  #cke_53 {
+    display: none !important;
+  }
+  </style>
+
+  <!-- BEGIN: PAGE SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+  <!-- Theme Javascript -->
+  <script src="assets/js/utility/utility.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Ckeditor JS -->
+  <script src="vendor/plugins/ckeditor/ckeditor.js"></script>
+
+  <!-- Summernote Plugin -->
+  <script src="vendor/plugins/summernote/summernote.min.js"></script>
+
+  <!-- MarkDown JS -->
+  <script src="vendor/plugins/markdown/markdown.js"></script>
+  <script src="vendor/plugins/markdown/to-markdown.js"></script>
+  <script src="vendor/plugins/markdown/bootstrap-markdown.js"></script>
+
+  <!-- X-Edit JS -->
+  <script src="vendor/plugins/moment/moment.min.js"></script>
+  <!-- X-Edit Dependencies -->
+  <script src="vendor/plugins/xeditable/js/bootstrap-editable.min.js"></script>
+  <script src="vendor/plugins/xeditable/inputs/address/address.js"></script>
+  <script src="vendor/plugins/xeditable/inputs/typeaheadjs/lib/typeahead.js"></script>
+  <script src="vendor/plugins/xeditable/inputs/typeaheadjs/typeaheadjs.js"></script>
+
+  <!-- Page Javascript -->
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core    
+    Core.init();
+
+    // Init Demo JS  
+    Demo.init();
+
+
+    // Init Summernote Plugin
+    $('.summernote').summernote({
+      height: 255, //set editable area's height
+      focus: false, //set focus editable area after Initialize summernote
+      oninit: function() {},
+      onChange: function(contents, $editable) {},
+    });
+
+    // Init Inline Summernote Plugin
+    $('.summernote-edit').summernote({
+      airMode: true,
+      focus: false //set focus editable area after Initialize summernote            
+    });
+
+    // Turn off automatic editor initilization.
+    // Used to prevent conflictions with multiple text 
+    // editors being displayed on the same page.
+    CKEDITOR.disableAutoInline = true;
+
+    // Init Ckeditor
+    CKEDITOR.replace('ckeditor1', {
+      height: 210,
+      on: {
+        instanceReady: function(evt) {
+          $('.cke').addClass('admin-skin cke-hide-bottom');
+        }
+      },
+    });
+
+    // Init Inline Ckeditors
+    CKEDITOR.inline('ckeditor-inline1');
+    CKEDITOR.inline('ckeditor-inline2');
+
+    // Init MarkDown Editor
+    $("#markdown-editor").markdown({
+      savable: false,
+      onChange: function(e) {
+        var content = e.parseContent(),
+          content_length = (content.match(/\n/g) || []).length + content.length
+        if (content == '') {
+          $('#md-footer').hide()
+        } else {
+          $('#md-footer').show().html(content)
+        }
+      }
+    });
+
+    // Init X-editable Plugin
+    function XEdit() {
+      //enable / disable xedit
+      $('#enable').click(function() {
+        $(this).toggleClass('active');
+        $('#user .editable').editable('toggleDisabled');
+      });
+
+      //editables 
+      $('#username').editable({
+        type: 'text',
+        pk: 1,
+        name: 'username',
+        title: 'Enter username'
+      });
+
+      $('#firstname').editable({
+        validate: function(value) {
+          if ($.trim(value) == '') return 'This field is required';
+        }
+      });
+
+      $('#sex').editable({
+        prepend: "not selected",
+        source: [{
+          value: 1,
+          text: 'Male'
+        }, {
+          value: 2,
+          text: 'Female'
+        }],
+        display: function(value, sourceData) {
+          var colors = {
+              "": "gray",
+              1: "green",
+              2: "blue"
+            },
+            elem = $.grep(sourceData, function(o) {
+              return o.value == value;
+            });
+
+          if (elem.length) {
+            $(this).text(elem[0].text).css("color", colors[value]);
+          } else {
+            $(this).empty();
+          }
+        }
+      });
+
+      $('#status').editable();
+
+      $('#group').editable({
+        showbuttons: false
+      });
+
+      $('#vacation').editable({
+        datepicker: {
+          todayBtn: 'linked'
+        }
+      });
+
+      $('#dob').editable();
+
+      $('#event').editable({
+        placement: 'right',
+        combodate: {
+          firstItem: 'name'
+        }
+      });
+
+      $('#meeting_start').editable({
+        format: 'yyyy-mm-dd hh:ii',
+        viewformat: 'dd/mm/yyyy hh:ii',
+        validate: function(v) {
+          if (v && v.getDate() == 10) return 'Day cant be 10!';
+        },
+        datetimepicker: {
+          todayBtn: 'linked',
+          weekStart: 1
+        }
+      });
+
+      $('#comments').editable({
+        showbuttons: 'bottom'
+      });
+
+      $('#note').editable();
+      $('#pencil').click(function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $('#note').editable('toggle');
+      });
+
+      $('#state').editable({
+        source: ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Dakota", "North Carolina", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+      });
+
+      $('#state2').editable({
+        value: 'California',
+        typeahead: {
+          name: 'state',
+          local: ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Dakota", "North Carolina", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+        }
+      });
+
+      $('#fruits').editable({
+        pk: 1,
+        limit: 3,
+        source: [{
+          value: 1,
+          text: 'banana'
+        }, {
+          value: 2,
+          text: 'peach'
+        }, {
+          value: 3,
+          text: 'apple'
+        }, {
+          value: 4,
+          text: 'watermelon'
+        }, {
+          value: 5,
+          text: 'orange'
+        }]
+      });
+
+      $('#address').editable({
+        url: '/post',
+        value: {
+          city: "Moscow",
+          street: "Lenina",
+          building: "12"
+        },
+        validate: function(value) {
+          if (value.city == '') return 'city is required!';
+        },
+        display: function(value) {
+          if (!value) {
+            $(this).empty();
+            return;
+          }
+          var html = '<b>' + $('<div>').text(value.city).html() + '</b>, ' + $('<div>').text(value.street).html() + ' st., bld. ' + $('<div>').text(value.building).html();
+          $(this).html(html);
+        }
+      });
+
+      $('#user .editable').on('hidden', function(e, reason) {
+        if (reason === 'save' || reason === 'nochange') {
+          var $next = $(this).closest('tr').next().find('.editable');
+          if ($('#autoopen').is(':checked')) {
+            setTimeout(function() {
+              $next.editable('show');
+            }, 300);
+          } else {
+            $next.focus();
+          }
+        }
+      });
+
+    };
+    XEdit();
+
+  });
+  </script>
+  <!-- END: PAGE SCRIPTS -->
+
+  <!-- END: PAGE SCRIPTS -->
+
+</body>
+
+
+<!-- Mirrored from admindesigns.com/demos/admin/theme/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 May 2016 14:03:30 GMT -->
+</html>

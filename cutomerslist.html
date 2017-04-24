@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <title>Admin </title>
+    <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme"/>
+    <meta name="description" content="AdminDesigns - A Responsive HTML5 Admin UI Framework">
+    <meta name="author" content="AdminDesigns">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font CSS (Via CDN) -->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+
+    <!-- Admin Forms CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+<!-- Datatables CSS -->
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/media/css/dataTables.bootstrap.css">
+
+  <!-- Datatables Addons CSS -->
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/media/css/dataTables.plugins.css">
+
+</head>
+
+
+<body class="calendar-page">
+<!-- start: Theme Settings Pane -->
+<div id="skin-toolbox">
+    <div class="panel">
+        <div class="panel-heading">
+        <span class="panel-icon">
+          <i class="fa fa-gear text-primary"></i>
+        </span>
+            <span class="panel-title"> Plateforme RDV</span>
+        </div>
+        <div class="panel-body pn">
+            <ul class="nav nav-list nav-list-sm pl15 pt10" role="tablist">
+                <li class="active">
+                    <a href="#toolbox-header" role="tab" data-toggle="tab">Navbar</a>
+                </li>
+                <li>
+                    <a href="#toolbox-sidebar" role="tab" data-toggle="tab">Sidebar</a>
+                </li>
+                <li>
+                    <a href="#toolbox-settings" role="tab" data-toggle="tab">Misc</a>
+                </li>
+            </ul>
+            <div class="tab-content p20 ptn pb15">
+                <div role="tabpanel" class="tab-pane active" id="toolbox-header">
+                    <form id="toolbox-header-skin">
+                        <h4 class="mv20">Header Skins</h4>
+                        <div class="skin-toolbox-swatches">
+                            <div class="checkbox-custom checkbox-disabled fill mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin8" checked value="">
+                                <label for="headerSkin8">Light</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-primary mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin1" value="bg-primary">
+                                <label for="headerSkin1">Primary</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-info mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin3" value="bg-info">
+                                <label for="headerSkin3">Info</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-warning mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin4" value="bg-warning">
+                                <label for="headerSkin4">Warning</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-danger mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin5" value="bg-danger">
+                                <label for="headerSkin5">Danger</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-alert mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin6" value="bg-alert">
+                                <label for="headerSkin6">Alert</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-system mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin7" value="bg-system">
+                                <label for="headerSkin7">System</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-success mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin2" value="bg-success">
+                                <label for="headerSkin2">Success</label>
+                            </div>
+                            <div class="checkbox-custom fill mb5">
+                                <input type="radio" name="headerSkin" id="headerSkin9" value="bg-dark">
+                                <label for="headerSkin9">Dark</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="toolbox-sidebar">
+                    <form id="toolbox-sidebar-skin">
+                        <h4 class="mv20">Sidebar Skins</h4>
+                        <div class="skin-toolbox-swatches">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="radio" name="sidebarSkin" checked id="sidebarSkin3" value="">
+                                <label for="sidebarSkin3">Dark</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-disabled mb5">
+                                <input type="radio" name="sidebarSkin" id="sidebarSkin1" value="sidebar-light">
+                                <label for="sidebarSkin1">Light</label>
+                            </div>
+                            <div class="checkbox-custom fill checkbox-light mb5">
+                                <input type="radio" name="sidebarSkin" id="sidebarSkin2" value="sidebar-light light">
+                                <label for="sidebarSkin2">Lighter</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="toolbox-settings">
+                    <form id="toolbox-settings-misc">
+                        <h4 class="mv20 mtn">Layout Options</h4>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" checked="" id="header-option">
+                                <label for="header-option">Fixed Header</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" checked="" id="sidebar-option">
+                                <label for="sidebar-option">Fixed Sidebar</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" id="breadcrumb-option">
+                                <label for="breadcrumb-option">Fixed Breadcrumbs</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-custom fill mb5">
+                                <input type="checkbox" id="breadcrumb-hidden">
+                                <label for="breadcrumb-hidden">Hide Breadcrumbs</label>
+                            </div>
+                        </div>
+                        <h4 class="mv20">Layout Options</h4>
+                        <div class="form-group">
+                            <div class="radio-custom mb5">
+                                <input type="radio" id="fullwidth-option" checked name="layout-option">
+                                <label for="fullwidth-option">Fullwidth Layout</label>
+                            </div>
+                        </div>
+                        <div class="form-group mb20">
+                            <div class="radio-custom radio-disabled mb5">
+                                <input type="radio" id="boxed-option" name="layout-option" disabled>
+                                <label for="boxed-option">Boxed Layout
+                                    <b class="text-muted">(Coming Soon)</b>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="form-group mn br-t p15">
+                <a href="#" id="clearLocalStorage" class="btn btn-primary btn-block pb10 pt10">Clear LocalStorage</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End: Theme Settings Pane -->
+
+<!-- Start: Main -->
+<div id="main">
+
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top">
+        <div class="navbar-branding">
+            <a class="navbar-brand" href="dashboard.html">
+                <b>Plateforme</b>RDV
+            </a>
+            <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+
+
+            <li class="hidden-xs">
+                <a class="request-fullscreen toggle-active" href="#">
+                    <span class="ad ad-screen-full fs18"></span>
+                </a>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-left navbar-search" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search..." value="Search...">
+            </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+
+
+            <li class="menu-divider hidden-xs">
+                <i class="fa fa-circle"></i>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img
+                        src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> Laurent
+                    <span class="caret caret-tp hidden-xs"></span>
+                </a>
+                <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+                    <li class="list-group-item">
+                        <a href="Profile.html" class="animated animated-short fadeInUp">
+                            <span class="fa fa-user"></span> Profile </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="Settings.html" class="animated animated-short fadeInUp">
+                            <span class="fa fa-gear"></span> Account Settings </a>
+                    </li>
+                    <li class="dropdown-footer">
+                        <a href="#" class="">
+                            <span class="fa fa-power-off pr5"></span> Logout </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- End: Header -->
+
+    <!-- Start: Sidebar Left -->
+    <aside id="sidebar_left" class="nano nano-primary affix">
+
+        <!-- Start: Sidebar Left Content -->
+        <div class="sidebar-left-content nano-content">
+
+            <!-- Start: Sidebar Header -->
+            <header class="sidebar-header">
+                <!-- Sidebar Widget - Menu (Slidedown) -->
+
+
+                <!-- Sidebar Widget - Search (hidden) -->
+                <div class="sidebar-widget search-widget hidden">
+                    <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-search"></i>
+              </span>
+                        <input type="text" id="sidebar-search" class="form-control" placeholder="Search...">
+                    </div>
+                </div>
+
+            </header>
+            <!-- End: Sidebar Header -->
+
+            <!-- Start: Sidebar Left Menu -->
+           <ul class="nav sidebar-menu">
+                <li class="active">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <span class="sidebar-title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="glyphicon glyphicon-book"></span>
+                        <span class="sidebar-title">Booking</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Booking list</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>add booking</a>
+                        </li>
+                         <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Booking tools</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-institution"></span>
+                        <span class="sidebar-title">Agency</span>
+                        <span class="caret"></span>
+
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Agency List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>add agency</a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-user"></span>
+                        <span class="sidebar-title">Customers</span>
+                        <span class="caret"></span>
+
+                    </a>
+                        <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Customer List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add customer</a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle" >
+                        <span class="fa fa-users"></span>
+                        <span class="sidebar-title">Employees</span>
+                         <span class="caret"></span>
+
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Employees List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add Employee</a>
+                        </li>
+
+                    </ul>
+                </li>
+                  <li>
+                    <a class="accordion-toggle" href="#">
+                        <span class="fa fa-tasks"></span>
+                        <span class="sidebar-title">Invoice</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Invoice List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Create Invoice</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a class="accordion-toggle" href="#">
+                        <span class="fa fa-tasks"></span>
+                        <span class="sidebar-title">Services</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Service List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add services</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="fa fa-ticket"></span>
+                        <span class="sidebar-title">Vouchers</span>
+                        <span class="caret"></span>
+                    </a>
+                     <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> Vouchers List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add Vouchers</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        <span class="sidebar-title">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-comment"></span>
+                        <span class="sidebar-title">SMS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="accordion-toggle">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="sidebar-title">Users</span>
+                        <span class="caret"></span>
+                    </a>
+                     <ul class="nav sub-nav" style="">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span> User List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-cube"></span>Add User</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-power-off"></span>
+                        <span class="sidebar-title">Logout</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- End: Sidebar Menu -->
+
+            <!-- Start: Sidebar Collapse Button -->
+            <div class="sidebar-toggle-mini">
+                <a href="#">
+                    <span class="fa fa-sign-out"></span>
+                </a>
+            </div>
+            <!-- End: Sidebar Collapse Button -->
+
+        </div>
+        <!-- End: Sidebar Left Content -->
+
+    </aside>
+    <!-- End: Sidebar Left -->
+
+
+    <!-- Start: Content-Wrapper -->
+    <section id="content_wrapper">
+
+        <!-- Start: Topbar-Dropdown -->
+        <div id="topbar-dropmenu">
+            <div class="topbar-menu row">
+                <div class="col-xs-4 col-sm-2">
+                    <a href="#" class="metro-tile">
+                        <span class="metro-icon glyphicon glyphicon-inbox"></span>
+                        <p class="metro-title">Messages</p>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <a href="#" class="metro-tile">
+                        <span class="metro-icon glyphicon glyphicon-user"></span>
+                        <p class="metro-title">Users</p>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <a href="#" class="metro-tile">
+                        <span class="metro-icon glyphicon glyphicon-headphones"></span>
+                        <p class="metro-title">Support</p>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <a href="#" class="metro-tile">
+                        <span class="metro-icon fa fa-gears"></span>
+                        <p class="metro-title">Settings</p>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <a href="#" class="metro-tile">
+                        <span class="metro-icon glyphicon glyphicon-facetime-video"></span>
+                        <p class="metro-title">Videos</p>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <a href="#" class="metro-tile">
+                        <span class="metro-icon glyphicon glyphicon-picture"></span>
+                        <p class="metro-title">Pictures</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End: Topbar-Dropdown -->
+
+        <!-- Start: Topbar -->
+        <header id="topbar">
+            <div class="topbar-left">
+                <ol class="breadcrumb">
+                    <li class="crumb-active">
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="crumb-icon">
+                        <a href="dashboard.html">
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a>
+                    </li>
+                    <li class="crumb-link">
+                        <a href="dashboard.html">Home</a>
+                    </li>
+                    <li class="crumb-trail">Customers List</li>
+                </ol>
+            </div>
+
+            <div class="topbar-right">
+              <a  href="#" class="btn btn-default" style="height:30px; padding:5px; border-radius:5px">Import Customers</a>
+
+                <a  href="" class="btn btn-primary" style="height:30px; padding:5px">+ Add Customer</a>
+            </div>
+        </header>
+        <!-- End: Topbar -->
+
+        <!-- Begin: Content -->
+        <section id="content" class="table-layout">
+            <!-- Start: Header -->
+            <header class="navbar navbar-fixed-top">
+                <div class="navbar-branding">
+                    <a class="navbar-brand" href="dashboard.html">
+                        <b>Plateforme</b>RDV
+                    </a>
+                    <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+                </div>
+                <ul class="nav navbar-nav navbar-left">
+
+
+                    <li class="hidden-xs">
+                        <a class="request-fullscreen toggle-active" href="#">
+                            <span class="ad ad-screen-full fs18"></span>
+                        </a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left navbar-search" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." value="Search...">
+                    </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+
+
+                    <li class="menu-divider hidden-xs">
+                        <i class="fa fa-circle"></i>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img
+                                src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> Laurent
+                            <span class="caret caret-tp hidden-xs"></span>
+                        </a>
+                        <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+                            <li class="list-group-item">
+                                <a href="Profile.html" class="animated animated-short fadeInUp">
+                                    <span class="fa fa-user"></span> Profile </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="Settings.html" class="animated animated-short fadeInUp">
+                                    <span class="fa fa-gear"></span> Account Settings </a>
+                            </li>
+                            <li class="dropdown-footer">
+                                <a href="#" class="">
+                                    <span class="fa fa-power-off pr5"></span> Logout </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </header>
+            <!-- End: Header -->
+
+            <div class="col-md-12" style="display: block;">
+                <div class="panel panel-visible" id="spy2">
+                    <div class="panel-heading">
+                        <div class="panel-title hidden-xs">
+                            <span class="glyphicon glyphicon-tasks"></span>Customers List
+                        </div>
+                    </div>
+                    <div class="panel-body pn">
+                       
+                        
+                        
+              <div class="panel panel-visible" id="spy3">
+                <div class="panel-body pn">
+                  <table class="table table-striped table-hover" id="datatable3" cellspacing="0" width="100%">
+                        <thead>
+                                <tr role="row">
+                                    <th class="sorting_asc" tabindex="0" aria-controls="datatable2" rowspan="1"
+                                        colspan="1" aria-sort="ascending"
+                                        aria-label="Name: activate to sort column descending" style="width: 121px;">
+                                        Customers id
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable2" rowspan="1" colspan="1"
+                                        aria-label="Position: activate to sort column ascending" style="width: 187px;">
+                                        Customer details
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable2" rowspan="1" colspan="1"
+                                        aria-label="Office: activate to sort column ascending" style="width: 60px;">
+                                       Address
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable2" rowspan="1" colspan="1"
+                                        aria-label="Age: activate to sort column ascending" style="width: 36px;">
+                                        Status
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable2" rowspan="1" colspan="1"
+                                        aria-label="Age: activate to sort column ascending" style="width: 36px;">
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr role="row" class="odd">
+                                    <td class="sorting_1">0001</td>
+                                    <td>Aubery Hill <br> <a>hosaful@ahoo.com</a></td>
+                                    <td>289 rue du faubourg des psotes</td>
+                                    <td>
+                                        <button type="button" class="btn active btn-dark btn-sm">Confirmed</button>
+
+                                    </td>
+                                    <td>
+                                        <a href="" style="color: #4a89dc;">View </a>
+                                     
+                                        <a href="" style="color: #e9573f;">Delete </a>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td class="sorting_1">0001</td>
+                                    <td>Aubery Hill <br> <a>hosaful@ahoo.com</a></td>
+                                    <td>289 rue du faubourg des psotes</td>
+                                    <td>
+                                        <button type="button" class="btn active btn-dark btn-sm">Confirmed</button>
+
+                                    </td>
+                                    <td>
+                                        <a href="" style="color: #4a89dc;">View </a>
+                                        <a href="" style="color: #e9573f;">Delete </a>
+                                    </td>
+                                </tr>
+
+
+
+                                </tbody>
+                  </table>
+                </div>
+                
+              </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End: Content -->
+
+        <!-- Begin: Page Footer -->
+        <footer id="content-footer" class="affix">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="footer-legal">© 2017 Plateforme RDV</span>
+                </div>
+               
+            </div>
+        </footer>
+        <!-- End: Page Footer -->
+
+
+    </section>
+    <!-- end: Content-Wrapper -->
+</div>
+<!-- End: Main -->
+
+<!-- BEGIN: PAGE SCRIPTS -->
+
+
+
+<style>
+    /* demo page styles */
+    .admin-form .panel.heading-border:before,
+    .admin-form .panel .heading-border:before {
+        transition: all 0.7s ease;
+    }
+</style>
+
+<!-- BEGIN: PAGE SCRIPTS -->
+
+<script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+  <!-- Datatables -->
+  <script src="vendor/plugins/datatables/media/js/jquery.dataTables.js"></script>
+
+  <!-- Datatables Tabletools addon -->
+  <script src="vendor/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+
+  <!-- Datatables ColReorder addon -->
+  <script src="vendor/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+
+  <!-- Datatables Bootstrap Modifications  -->
+  <script src="vendor/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+
+  <!-- Theme Javascript -->
+  <script src="assets/js/utility/utility.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core    
+    Core.init();
+
+    // Init Demo JS  
+    Demo.init();
+
+    // Init DataTables
+    $('#datatable').dataTable({
+      "sDom": 't<"dt-panelfooter clearfix"ip>',
+      "oTableTools": {
+        "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+      }
+    });
+
+    $('#datatable2').dataTable({
+      "aoColumnDefs": [{
+        'bSortable': false,
+        'aTargets': [-1]
+      }],
+      "oLanguage": {
+        "oPaginate": {
+          "sPrevious": "",
+          "sNext": ""
+        }
+      },
+      "iDisplayLength": 5,
+      "aLengthMenu": [
+        [5, 10, 25, 50, -1],
+        [5, 10, 25, 50, "All"]
+      ],
+      "sDom": '<"dt-panelmenu clearfix"lfr>t<"dt-panelfooter clearfix"ip>',
+      "oTableTools": {
+        "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+      }
+    });
+
+    $('#datatable3').dataTable({
+      "aoColumnDefs": [{
+        'bSortable': false,
+        'aTargets': [-1]
+      }],
+      "oLanguage": {
+        "oPaginate": {
+          "sPrevious": "",
+          "sNext": ""
+        }
+      },
+      "iDisplayLength": 5,
+      "aLengthMenu": [
+        [5, 10, 25, 50, -1],
+        [5, 10, 25, 50, "All"]
+      ],
+      "sDom": '<"dt-panelmenu clearfix"Tfr>t<"dt-panelfooter clearfix"ip>',
+      "oTableTools": {
+        "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+      }
+    });
+
+    $('#datatable4').dataTable({
+      "aoColumnDefs": [{
+        'bSortable': false,
+        'aTargets': [-1]
+      }],
+      "oLanguage": {
+        "oPaginate": {
+          "sPrevious": "",
+          "sNext": ""
+        }
+      },
+      "iDisplayLength": 5,
+      "aLengthMenu": [
+        [5, 10, 25, 50, -1],
+        [5, 10, 25, 50, "All"]
+      ],
+      "sDom": 'T<"panel-menu dt-panelmenu"lfr><"clearfix">tip',
+
+      "oTableTools": {
+        "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+      }
+    });
+
+    // Multi-Column Filtering
+    $('#datatable5 thead th').each(function() {
+      var title = $('#datatable5 tfoot th').eq($(this).index()).text();
+      $(this).html('<input type="text" class="form-control" placeholder="Search ' + title + '" />');
+    });
+
+    // DataTable
+    var table5 = $('#datatable5').DataTable({
+      "sDom": 't<"dt-panelfooter clearfix"ip>',
+      "ordering": false
+    });
+
+    // Apply the search
+    table5.columns().eq(0).each(function(colIdx) {
+      $('input', table5.column(colIdx).header()).on('keyup change', function() {
+        table5
+          .column(colIdx)
+          .search(this.value)
+          .draw();
+      });
+    });
+
+    // ABC FILTERING
+    var table6 = $('#datatable6').DataTable({
+      "sDom": 't<"dt-panelfooter clearfix"ip>',
+      "ordering": false
+    });
+
+    var alphabet = $('<div class="dt-abc-filter"/>').append('<span class="abc-label">Search: </span> ');
+    var columnData = table6.column(0).data();
+    var bins = bin(columnData);
+
+    $('<span class="active"/>')
+      .data('letter', '')
+      .data('match-count', columnData.length)
+      .html('None')
+      .appendTo(alphabet);
+
+    for (var i = 0; i < 26; i++) {
+      var letter = String.fromCharCode(65 + i);
+
+      $('<span/>')
+        .data('letter', letter)
+        .data('match-count', bins[letter] || 0)
+        .addClass(!bins[letter] ? 'empty' : '')
+        .html(letter)
+        .appendTo(alphabet);
+    }
+
+    $('#datatable6').parents('.panel').find('.panel-menu').addClass('dark').html(alphabet);
+
+    alphabet.on('click', 'span', function() {
+      alphabet.find('.active').removeClass('active');
+      $(this).addClass('active');
+
+      _alphabetSearch = $(this).data('letter');
+      table6.draw();
+    });
+
+    var info = $('<div class="alphabetInfo"></div>')
+      .appendTo(alphabet);
+
+    var _alphabetSearch = '';
+
+    $.fn.dataTable.ext.search.push(function(settings, searchData) {
+      if (!_alphabetSearch) {
+        return true;
+      }
+      if (searchData[0].charAt(0) === _alphabetSearch) {
+        return true;
+      }
+      return false;
+    });
+
+    function bin(data) {
+      var letter, bins = {};
+      for (var i = 0, ien = data.length; i < ien; i++) {
+        letter = data[i].charAt(0).toUpperCase();
+
+        if (bins[letter]) {
+          bins[letter]++;
+        } else {
+          bins[letter] = 1;
+        }
+      }
+      return bins;
+    }
+
+    // ROW GROUPING
+    var table7 = $('#datatable7').DataTable({
+      "columnDefs": [{
+        "visible": false,
+        "targets": 2
+      }],
+      "order": [
+        [2, 'asc']
+      ],
+      "sDom": 't<"dt-panelfooter clearfix"ip>',
+      "displayLength": 25,
+      "drawCallback": function(settings) {
+        var api = this.api();
+        var rows = api.rows({
+          page: 'current'
+        }).nodes();
+        var last = null;
+
+        api.column(2, {
+          page: 'current'
+        }).data().each(function(group, i) {
+          if (last !== group) {
+            $(rows).eq(i).before(
+              '<tr class="row-label ' + group.replace(/ /g, '').toLowerCase() + '"><td colspan="5">' + group + '</td></tr>'
+            );
+            last = group;
+          }
+        });
+      }
+    });
+
+    // Order by the grouping
+    $('#datatable7 tbody').on('click', 'tr.row-label', function() {
+      var currentOrder = table7.order()[0];
+      if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+        table7.order([2, 'desc']).draw();
+      } else {
+        table7.order([2, 'asc']).draw();
+      }
+    });
+
+    $('#datatable8').DataTable({
+      "sDom": 'Rt<"dt-panelfooter clearfix"ip>',
+    });
+
+		// COLLAPSIBLE ROWS
+		function format ( d ) {
+	    // `d` is the original data object for the row
+	    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+          '<td class="fw600 pr10">Full name:</td>'+
+          '<td>'+d.name+'</td>'+
+        '</tr>'+
+        '<tr>'+
+          '<td class="fw600 pr10">Extension:</td>'+
+          '<td>'+d.extn+'</td>'+
+        '</tr>'+
+        '<tr>'+
+          '<td class="fw600 pr10">Extra info:</td>'+
+          '<td>And any further details here (images etc)...</td>'+
+        '</tr>'+
+      '</table>';
+		}
+		 
+    var table = $('#datatable9').DataTable({
+      "sDom": 'Rt<"dt-panelfooter clearfix"ip>',
+      "ajax": "vendor/plugins/datatables/examples/data_sources/objects.txt",
+      "columns": [
+        {
+          "className":      'details-control',
+          "orderable":      false,
+          "data":           null,
+          "defaultContent": ''
+        },
+        { "data": "name" },
+        { "data": "position" },
+        { "data": "office" },
+        { "data": "salary" }
+      ],
+      "order": [[1, 'asc']]
+    });
+     
+    // Add event listener for opening and closing details
+    $('#datatable9 tbody').on('click', 'td.details-control', function () {
+      var tr = $(this).closest('tr');
+      var row = table.row( tr );
+
+      if ( row.child.isShown() ) {
+        // This row is already open - close it
+        row.child.hide();
+        tr.removeClass('shown');
+      }
+      else {
+        // Open this row
+        row.child( format(row.data()) ).show();
+        tr.addClass('shown');
+      }
+    });
+
+
+    // MISC DATATABLE HELPER FUNCTIONS
+
+    // Add Placeholder text to datatables filter bar
+    $('.dataTables_filter input').attr("placeholder", "Enter Terms...");
+
+
+  });
+  </script>
+  <!-- END: PAGE SCRIPTS -->
+
+
+</body>
+
+
+</html>
